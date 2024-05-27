@@ -1,0 +1,16 @@
+#sb-page-container {
+  position: relative;
+
+  min-height: 100vh;
+}
+
+#sb-page-content {
+  padding-top: 100px;
+}
+
+#sb-footer {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+}

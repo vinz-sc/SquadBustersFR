@@ -1,0 +1,58 @@
+<header>
+  <nav class="sb-navbar navbar navbar-expand-lg">
+    <a class="sb-navbar-brand" routerLink="">
+      <img
+        src="assets/brand.png"
+        alt="Logo"
+        height="50"
+        class="d-inline-block"
+      />
+    </a>
+    <div class="sb-collapse-btn" (click)="toggleMenu()">
+      <i-bs [name]="isMenuOpen ? 'x-lg' : 'list'"></i-bs>
+    </div>
+    <div
+      class="sb-navbar-collapse"
+      [ngClass]="{ 'sb-navbar-open': isMenuOpen }"
+    >
+      <ul class="sb-navbar-nav">
+        <li class="sb-nav-item">
+          <a
+            class="sb-nav-link"
+            routerLink="news"
+            routerLinkActive="sb-link-active"
+            (click)="closeMenu()"
+          >
+            Actualités
+          </a>
+        </li>
+        <li class="sb-nav-item">
+          <a
+            class="sb-nav-link"
+            routerLink="updates"
+            routerLinkActive="sb-link-active"
+            (click)="closeMenu()"
+          >
+            Mises à jour
+          </a>
+        </li>
+        <li class="sb-nav-item">
+          <a
+            class="sb-nav-link"
+            routerLink="wiki"
+            routerLinkActive="sb-link-active"
+            (click)="closeMenu()"
+          >
+            Wiki
+          </a>
+        </li>
+        <li class="sb-nav-item">
+          <div class="sb-spacer"></div>
+        </li>
+        <li class="sb-nav-item">
+          <app-theme-switcher></app-theme-switcher>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

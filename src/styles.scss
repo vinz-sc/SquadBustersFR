@@ -1,1 +1,119 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "SquadLatin";
+  src: url("assets/fonts/SquadLatin-Regular.otf") format("opentype");
+}
+
+@mixin darken() {
+  --sb-bg-color-rgb: 34, 39, 43; /* DarkNeutral200 */
+  --sb-color-rgb: 241, 242, 244; /* Neutral200 */
+  --sb-color-hover-rgb: 220, 223, 228; /* Neutral300 */
+  // --sb-primary-color-rgb: 110, 93, 198; /* Purple700 */
+  // --sb-primary-color-hover-rgb: 130, 112, 219; /* Purple600 */
+  // --sb-secondary-color-rgb: 148, 111, 0; /* Yellow700 */
+  // --sb-secondary-color-hover-rgb: 179, 134, 0; /* Yellow600 */
+  --sb-primary-color-rgb: 255, 221, 112;
+  --sb-primary-color-hover-rgb: 255, 236, 153;
+  --sb-secondary-color-rgb: 192, 86, 247;
+  --sb-secondary-color-hover-rgb: 210, 126, 249;
+  --sb-tertiary-color-rgb: 148, 61, 115; /* Magenta800 */
+  --sb-tertiary-color-hover-rgb: 174, 71, 135; /* Magenta700 */
+
+  --sb-bg-color: rgb(var(--sb-bg-color-rgb));
+  --sb-color: rgb(var(--sb-color-rgb));
+  --sb-color-hover: rgb(var(--sb-color-hover-rgb));
+  --sb-primary-color: rgb(var(--sb-primary-color-rgb));
+  --sb-primary-color-hover: rgb(var(--sb-primary-color-hover-rgb));
+  --sb-secondary-color: rgb(var(--sb-secondary-color-rgb));
+  --sb-secondary-color-hover: rgb(var(--sb-secondary-color-hover-rgb));
+  --sb-tertiary-color: rgb(var(--sb-tertiary-color-rgb));
+  --sb-tertiary-color-hover: rgb(var(--sb-tertiary-color-hover-rgb));
+}
+
+@mixin lighten() {
+  --sb-bg-color-rgb: 241, 242, 244; /* Neutral200 */
+  --sb-color-rgb: 34, 39, 43; /* DarkNeutral200 */
+  // --sb-color-hover-rgb: 44, 51, 58; /* DarkNeutral300 */
+  // --sb-primary-color-rgb: 143, 126, 231; /* Purple500 */
+  // --sb-primary-color-hover-rgb: 159, 143, 239; /* Purple400 */
+  // --sb-secondary-color-rgb: 207, 159, 2; /* Yellow500 */
+  // --sb-secondary-color-hover-rgb: 226, 178, 3; /* Yellow400 */
+  --sb-primary-color-rgb: 246, 202, 69;
+  --sb-primary-color-hover-rgb: 248, 213, 106;
+  --sb-secondary-color-rgb: 173, 48, 232;
+  --sb-secondary-color-hover-rgb: 189, 89, 237;
+  --sb-tertiary-color-rgb: 247, 151, 210; /* Magenta300 */
+  --sb-tertiary-color-hover-rgb: 253, 208, 236; /* Magenta200 */
+
+  --sb-bg-color: rgb(var(--sb-bg-color-rgb));
+  --sb-color: rgb(var(--sb-color-rgb));
+  --sb-primary-color: rgb(var(--sb-primary-color-rgb));
+  --sb-primary-color-hover: rgb(var(--sb-primary-color-hover-rgb));
+  --sb-secondary-color: rgb(var(--sb-secondary-color-rgb));
+  --sb-secondary-color-hover: rgb(var(--sb-secondary-color-hover-rgb));
+  --sb-tertiary-color: rgb(var(--sb-tertiary-color-rgb));
+  --sb-tertiary-color-hover: rgb(var(--sb-tertiary-color-hover-rgb));
+}
+
+body.sb-dark-theme {
+  @include darken();
+}
+
+body.sb-light-theme {
+  @include lighten();
+}
+
+body {
+  background-color: var(--sb-bg-color) !important;
+  color: var(--sb-color) !important;
+
+  font-family: "SquadLatin", sans-serif !important;
+
+  .sb-container {
+    position: relative;
+
+    @media screen and (min-width: 992px) {
+      max-width: var(--bs-breakpoint-xl);
+
+      padding: 0 2.5rem;
+      margin: 40px auto;
+    }
+
+    @media screen and (max-width: 991px) {
+      padding: 0 1.5rem;
+      margin: 20px auto;
+    }
+  }
+
+  .sb-btn {
+    display: inline-block;
+
+    padding: 0.8rem 1.6rem;
+
+    background-color: var(--sb-primary-color);
+    color: var(--sb-bg-color);
+
+    border: 3px solid black;
+    border-radius: 10px;
+
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    box-shadow: 0 3px 0 black;
+
+    transition: background-color 0.2s ease, box-shadow 0.2s ease,
+      transform 0.2s ease;
+
+    &:active {
+      box-shadow: none;
+      transform: translateY(3px);
+    }
+
+    &:hover {
+      background-color: var(--sb-primary-color-hover);
+    }
+  }
+}
+
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";
