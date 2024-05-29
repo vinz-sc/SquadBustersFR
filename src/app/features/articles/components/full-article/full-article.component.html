@@ -1,0 +1,26 @@
+<div *ngIf="article; else notFound" class="sb-container">
+  <a class="sb-back sb-btn" [routerLink]="backUrl">
+    <i-bs name="chevron-double-left"></i-bs>
+  </a>
+
+  <h1 class="sb-title">{{ article.title }}</h1>
+  <div class="sb-subtitle">{{ publishedAt }}</div>
+
+  <div class="sb-header">
+    <img *ngIf="isHeaderImage" [src]="headerUrl" alt=" " />
+    <iframe
+      *ngIf="!isHeaderImage"
+      [src]="youTubeUrl"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <div class="sb-content" [innerHTML]="content"></div>
+</div>
+
+<ng-template #notFound>
+  <app-not-found></app-not-found>
+</ng-template>

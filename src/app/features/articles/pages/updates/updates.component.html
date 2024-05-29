@@ -1,0 +1,32 @@
+<div class="sb-container">
+  <h1 class="sb-title">Dernières nouveautés</h1>
+
+  <div class="row">
+    <app-preview-card
+      *ngFor="let article of updates"
+      [article]="article"
+      class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
+    ></app-preview-card>
+  </div>
+
+  <div class="sb-pagination">
+    <ngb-pagination
+      id="articles-pagination"
+      class="d-flex justify-content-center"
+      [collectionSize]="updatesCount"
+      [maxSize]="MAXIMUM_PAGES"
+      [(page)]="currentPage"
+      [pageSize]="ITEMS_PER_PAGE"
+      [rotate]="true"
+    >
+      <ng-template ngbPaginationPrevious>
+        <i-bs name="chevron-left" class="me-1"></i-bs>
+        Précédent
+      </ng-template>
+      <ng-template ngbPaginationNext>
+        Suivant
+        <i-bs name="chevron-right" class="ms-1"></i-bs>
+      </ng-template>
+    </ngb-pagination>
+  </div>
+</div>

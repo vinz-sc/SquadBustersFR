@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { CoreModule } from './core/core.module';
+import { ArticlesModule } from './features/articles/articles.module';
 import { HomeModule } from './features/home/home.module';
 import { SharedModule } from './shared/shared.module';
 
@@ -13,6 +14,7 @@ import { SharedModule } from './shared/shared.module';
   declarations: [AppComponent],
   imports: [
     AppRoutingModule,
+    ArticlesModule,
     BrowserModule,
     CoreModule,
     HomeModule,

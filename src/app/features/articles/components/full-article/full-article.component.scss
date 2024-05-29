@@ -1,0 +1,42 @@
+.sb-back {
+  position: absolute;
+}
+
+.sb-title {
+  margin-bottom: 2rem;
+
+  font-family: "SquadLatinBold", sans-serif;
+  font-weight: 900;
+
+  text-align: center;
+}
+
+.sb-subtitle {
+  margin-bottom: 1.5rem;
+
+  color: rgba(var(--sb-color-rgb), 0.8);
+
+  text-align: center;
+}
+
+.sb-header {
+  width: clamp(280px, 100%, 840px);
+  aspect-ratio: 16 / 9;
+
+  margin: 0 auto;
+
+  border-radius: 1.5rem;
+
+  overflow: hidden;
+
+  > * {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.sb-content {
+  max-width: 42rem;
+
+  margin: 4rem auto auto;
+}

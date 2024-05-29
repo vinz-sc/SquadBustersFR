@@ -1,0 +1,33 @@
+/* ARTICLES PAGINATION */
+#articles-pagination {
+  .pagination {
+    gap: 0.5rem;
+
+    .page-item {
+      min-width: 40px;
+
+      height: 40px;
+
+      &.active .page-link {
+        background-color: var(--sb-bg-color-dark);
+      }
+
+      &.disabled .page-link {
+        opacity: 0.5;
+      }
+
+      .page-link {
+        color: var(--sb-color);
+
+        background-color: transparent;
+        border: none;
+
+        text-align: center;
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
