@@ -19,6 +19,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'wiki',
+    loadChildren: () =>
+      import('./features/wiki/wiki-routing.module').then(
+        (m) => m.WikiRoutingModule
+      ),
+  },
+  {
     path: '**',
     component: NotFoundComponent,
   },
