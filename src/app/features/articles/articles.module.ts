@@ -2,7 +2,12 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
+import {
+  bootstrapChevronDoubleLeft,
+  bootstrapChevronLeft,
+  bootstrapChevronRight,
+} from '@ng-icons/bootstrap-icons';
+import { NgIconsModule } from '@ng-icons/core';
 
 import { ArticlesRoutingModule } from './articles-routing.module';
 
@@ -26,8 +31,12 @@ import { PreviewCardComponent } from './components/preview-card/preview-card.com
     ArticlesRoutingModule,
     CommonModule,
     CoreModule,
+    NgIconsModule.withIcons({
+      bootstrapChevronDoubleLeft,
+      bootstrapChevronLeft,
+      bootstrapChevronRight,
+    }),
     NgbPaginationModule,
-    NgxBootstrapIconsModule.pick(allIcons),
     SharedModule,
   ],
 })

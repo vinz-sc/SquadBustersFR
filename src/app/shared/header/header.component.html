@@ -9,7 +9,10 @@
       />
     </a>
     <div class="sb-collapse-btn" (click)="toggleMenu()">
-      <i-bs [name]="isMenuOpen ? 'x-lg' : 'list'"></i-bs>
+      <ng-icon
+        [name]="isMenuOpen ? 'bootstrapXLg' : 'bootstrapList'"
+        size=""
+      ></ng-icon>
     </div>
     <div
       class="sb-navbar-collapse"

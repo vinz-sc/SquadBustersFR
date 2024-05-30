@@ -31,8 +31,6 @@ label {
   }
 
   .sb-sun {
-    color: var(--sb-color);
-
     filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
 
     transition: 0.5s ease;
@@ -41,8 +39,6 @@ label {
 
   .sb-moon {
     position: absolute;
-
-    color: var(--sb-color);
 
     filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
 

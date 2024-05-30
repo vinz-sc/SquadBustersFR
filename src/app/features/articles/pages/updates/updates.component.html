@@ -20,12 +20,16 @@
       [rotate]="true"
     >
       <ng-template ngbPaginationPrevious>
-        <i-bs name="chevron-left" class="me-1"></i-bs>
-        Précédent
+        <div class="d-flex">
+          <ng-icon name="bootstrapChevronLeft" size="" class="me-2"></ng-icon>
+          Précédent
+        </div>
       </ng-template>
       <ng-template ngbPaginationNext>
-        Suivant
-        <i-bs name="chevron-right" class="ms-1"></i-bs>
+        <div class="d-flex">
+          Suivant
+          <ng-icon name="bootstrapChevronRight" size="" class="ms-2"></ng-icon>
+        </div>
       </ng-template>
     </ngb-pagination>
   </div>

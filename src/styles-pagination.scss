@@ -4,12 +4,22 @@
     gap: 0.5rem;
 
     .page-item {
-      min-width: 40px;
+      display: flex;
 
-      height: 40px;
+      align-items: center;
+      justify-content: center;
 
-      &.active .page-link {
-        background-color: var(--sb-bg-color-dark);
+      min-width: 50px;
+
+      height: 50px;
+
+      &.active {
+        background-color: var(--sb-bg-color-light);
+
+        border: 3px solid black;
+        border-radius: 10px;
+
+        box-shadow: 0 3px 0 black;
       }
 
       &.disabled .page-link {
