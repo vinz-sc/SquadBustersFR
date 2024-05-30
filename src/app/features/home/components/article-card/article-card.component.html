@@ -1,0 +1,13 @@
+<a class="sb-card" [routerLink]="fullUrl">
+  <div class="sb-header">
+    <img *ngIf="isHeaderImage" [src]="headerUrl" alt=" " />
+    <img *ngIf="!isHeaderImage" [src]="youTubeThumbnailUrl" alt=" " />
+  </div>
+  <div class="sb-body">
+    <h3 class="sb-title">{{ article?.title }}</h3>
+    <span class="sb-subtitle">{{ publicationDate }}</span>
+    <p class="sb-content">
+      {{ article?.content | safeHtmlToPlainText }}
+    </p>
+  </div>
+</a>

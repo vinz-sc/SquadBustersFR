@@ -1,0 +1,34 @@
+<div class="sb-card">
+  <div class="sb-img">
+    <img [src]="creator?.logoPath" alt="Profile picture" />
+  </div>
+  <div class="sb-details">
+    <h3 class="sb-name">{{ creator?.username }}</h3>
+    <div class="sb-socials">
+      <a
+        *ngIf="creator?.twitter"
+        [href]="creator?.twitter"
+        class="sb-btn"
+        target="_blank"
+      >
+        <ng-icon name="bootstrapTwitterX" size=""></ng-icon>
+      </a>
+      <a
+        *ngIf="creator?.youTube"
+        [href]="creator?.youTube"
+        class="sb-btn"
+        target="_blank"
+      >
+        <ng-icon name="bootstrapYoutube" size=""></ng-icon>
+      </a>
+      <a
+        *ngIf="creator?.tikTok"
+        [href]="creator?.tikTok"
+        class="sb-btn"
+        target="_blank"
+      >
+        <ng-icon name="bootstrapTiktok" size=""></ng-icon>
+      </a>
+    </div>
+  </div>
+</div>

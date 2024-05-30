@@ -1,0 +1,58 @@
+.sb-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  height: 150px;
+
+  background: linear-gradient(180deg, #066afe, #0f4494);
+
+  border: 3px solid black;
+  border-radius: 75px 10px 75px 75px;
+
+  box-shadow: 0 3px 0 black;
+
+  .sb-img {
+    height: calc(100% - 0.5rem);
+    aspect-ratio: 1/1;
+
+    margin: 0.25rem;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  .sb-details {
+    margin-right: 2rem;
+
+    .sb-name {
+      color: var(--sb-white);
+      font-family: "SquadLatinBold", sans-serif;
+    }
+
+    .sb-socials {
+      display: flex;
+
+      gap: 0.5rem;
+
+      .sb-btn {
+        width: 2rem;
+        height: 2rem;
+
+        padding: 0.25rem;
+
+        border-radius: 50%;
+      }
+    }
+  }
+}

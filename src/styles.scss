@@ -8,6 +8,11 @@
   src: url("assets/fonts/SquadLatin-Bold.otf") format("opentype");
 }
 
+:root {
+  --sb-black: rgb(34, 39, 43);
+  --sb-white: rgb(241, 242, 244);
+}
+
 @mixin darken() {
   --sb-bg-color-dark-rgb: 16, 18, 20; /* DarkNeutral100 */
   --sb-bg-color-rgb: 34, 39, 43; /* DarkNeutral200 */
@@ -16,10 +21,10 @@
   --sb-color-hover-rgb: 220, 223, 228; /* Neutral300 */
   --sb-primary-color-rgb: 255, 221, 112;
   --sb-primary-color-hover-rgb: 255, 236, 153;
-  --sb-secondary-color-rgb: 192, 86, 247;
-  --sb-secondary-color-hover-rgb: 210, 126, 249;
-  --sb-tertiary-color-rgb: 148, 61, 115; /* Magenta800 */
-  --sb-tertiary-color-hover-rgb: 174, 71, 135; /* Magenta700 */
+  --sb-secondary-color-rgb: 0, 76, 225;
+  --sb-secondary-color-hover-rgb: 6, 106, 254;
+  --sb-tertiary-color-rgb: 192, 86, 247;
+  --sb-tertiary-color-hover-rgb: 210, 126, 249;
 
   --sb-bg-color-dark: rgb(var(--sb-bg-color-dark-rgb));
   --sb-bg-color: rgb(var(--sb-bg-color-rgb));
@@ -41,10 +46,10 @@
   --sb-color-rgb: 34, 39, 43; /* DarkNeutral200 */
   --sb-primary-color-rgb: 246, 202, 69;
   --sb-primary-color-hover-rgb: 248, 213, 106;
-  --sb-secondary-color-rgb: 173, 48, 232;
-  --sb-secondary-color-hover-rgb: 189, 89, 237;
-  --sb-tertiary-color-rgb: 247, 151, 210; /* Magenta300 */
-  --sb-tertiary-color-hover-rgb: 253, 208, 236; /* Magenta200 */
+  --sb-secondary-color-rgb: 33, 120, 226;
+  --sb-secondary-color-hover-rgb: 51, 150, 255;
+  --sb-tertiary-color-rgb: 173, 48, 232;
+  --sb-tertiary-color-hover-rgb: 189, 89, 237;
 
   --sb-bg-color-dark: rgb(var(--sb-bg-color-dark-rgb));
   --sb-bg-color: rgb(var(--sb-bg-color-rgb));
@@ -93,7 +98,10 @@ body {
     --sb-btn-bg-color-hover: var(--sb-bg-color-light);
     --sb-btn-color: var(--sb-color);
 
-    display: inline-block;
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
 
     padding: 0.8rem 1.6rem;
 
@@ -103,7 +111,6 @@ body {
     border: 3px solid black;
     border-radius: 10px;
 
-    text-align: center;
     text-decoration: none;
     text-transform: uppercase;
 
@@ -111,6 +118,18 @@ body {
 
     transition: background-color 0.2s ease, box-shadow 0.2s ease,
       transform 0.2s ease;
+
+    &.sb-btn-primary {
+      --sb-btn-bg-color: var(--sb-primary-color);
+      --sb-btn-bg-color-hover: var(--sb-primary-color-hover);
+      --sb-btn-color: var(--sb-black);
+    }
+
+    &.sb-btn-secondary {
+      --sb-btn-bg-color: var(--sb-secondary-color);
+      --sb-btn-bg-color-hover: var(--sb-secondary-color-hover);
+      --sb-btn-color: var(--sb-bg-color);
+    }
 
     &:active {
       box-shadow: none;

@@ -1,3 +1,70 @@
+<div class="sb-header">
+  <div class="sb-header-bg"></div>
+
+  <div class="sb-separator">
+    <app-separator class="w-100"></app-separator>
+  </div>
+  <div class="sb-separator sb-reversed">
+    <app-separator class="w-100"></app-separator>
+  </div>
+</div>
+
+<div class="sb-container sb-articles">
+  <h1 class="sb-title">Les dernières publications</h1>
+
+  <div class="row">
+    <app-article-card
+      *ngFor="let article of articles"
+      [article]="article"
+      class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
+    ></app-article-card>
+  </div>
+</div>
+
+<div class="sb-download">
+  <div class="sb-gradient"></div>
+  <div class="sb-container">
+    <img class="sb-icon-app" src="assets/icon-app.png" alt="App icon" />
+    <div class="sb-details">
+      <h2 class="sb-title">Téléchargez et jouez dès maintenant !</h2>
+
+      <div class="sb-buttons">
+        <a
+          class="sb-btn sb-btn-primary"
+          href="https://play.google.com/store/apps/details?id=com.supercell.squad"
+          target="_blank"
+        >
+          <ng-icon name="bootstrapGooglePlay" size="" class="me-2"></ng-icon>
+          Google Play
+        </a>
+        <a
+          class="sb-btn sb-btn-primary"
+          href="https://apps.apple.com/fr/app/squad-busters/id1668983788"
+          target="_blank"
+        >
+          <ng-icon name="bootstrapApple" size="" class="me-2"></ng-icon>
+          App Store
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="sb-container">
-  <p>home works!</p>
+  <h1 class="sb-title">Les différents créateurs SquadBusters FR</h1>
+
+  <div class="sb-creators">
+    <app-creator-card
+      *ngFor="let creator of creators"
+      [creator]="creator"
+    ></app-creator-card>
+  </div>
+
+  <h1 class="sb-title mb-3">Les codes créateurs</h1>
+
+  <img
+    class="w-100"
+    src="assets/images/creator_codes.png"
+    alt="Codes créateurs SquadBusters"
+  />
 </div>

@@ -3,6 +3,8 @@ import { SquadBustersFRApi } from '@vinz-sc/squadbustersfr-api';
 
 import { environment } from '../../../environments/environment';
 
+import { Creator } from '../models/Creator';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -38,5 +40,28 @@ export class CoreService {
 
   public get api(): SquadBustersFRApi {
     return this._api;
+  }
+
+  public get creators(): Creator[] {
+    return [
+      new Creator(
+        'Mateo26',
+        'https://x.com/Mateo26__',
+        null,
+        'https://www.tiktok.com/@mateo26.crfr'
+      ),
+      new Creator(
+        'Spartafail',
+        'https://x.com/Spartafail',
+        'https://www.youtube.com/@spartafail',
+        'https://www.tiktok.com/@spartafailcoc'
+      ),
+      new Creator(
+        'Vadowki',
+        'https://x.com/vadowki',
+        'https://www.youtube.com/@VadowkiSB',
+        'https://www.tiktok.com/@vadowki'
+      ),
+    ];
   }
 }
