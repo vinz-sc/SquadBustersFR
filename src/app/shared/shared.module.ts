@@ -4,9 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import {
+  bootstrapDiscord,
   bootstrapList,
   bootstrapMoonStarsFill,
   bootstrapSunFill,
+  bootstrapTwitterX,
   bootstrapXLg,
 } from '@ng-icons/bootstrap-icons';
 import { NgIconsModule } from '@ng-icons/core';
@@ -29,9 +31,11 @@ import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.componen
     CommonModule,
     FormsModule,
     NgIconsModule.withIcons({
+      bootstrapDiscord,
       bootstrapList,
       bootstrapMoonStarsFill,
       bootstrapSunFill,
+      bootstrapTwitterX,
       bootstrapXLg,
     }),
     RouterModule,
