@@ -18,11 +18,13 @@ import { NewsComponent } from './pages/news/news.component';
 import { UpdatesComponent } from './pages/updates/updates.component';
 
 import { FullArticleComponent } from './components/full-article/full-article.component';
+import { LoadingCardComponent } from './components/loading-card/loading-card.component';
 import { PreviewCardComponent } from './components/preview-card/preview-card.component';
 
 @NgModule({
   declarations: [
     FullArticleComponent,
+    LoadingCardComponent,
     NewsComponent,
     PreviewCardComponent,
     UpdatesComponent,

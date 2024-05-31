@@ -2,39 +2,44 @@
   <h1 class="sb-title">Dernières actualités</h1>
 
   <div class="row">
-    <app-preview-card
-      *ngFor="let article of news"
-      [article]="article"
-      class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
-    ></app-preview-card>
+    <ng-template [ngIf]="loading" [ngIfElse]="newsCards">
+      <app-loading-card
+        *ngFor="let _ of loadingArray"
+        class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
+      ></app-loading-card>
+    </ng-template>
 
-    <div class="sb-pagination">
-      <ngb-pagination
-        id="articles-pagination"
-        class="d-flex justify-content-center"
-        [collectionSize]="newsCount"
-        [maxSize]="MAXIMUM_PAGES"
-        [(page)]="currentPage"
-        [pageSize]="ITEMS_PER_PAGE"
-        [rotate]="true"
-      >
-        <ng-template ngbPaginationPrevious>
-          <div class="d-flex">
-            <ng-icon name="bootstrapChevronLeft" size="" class="me-2"></ng-icon>
-            Précédent
-          </div>
-        </ng-template>
-        <ng-template ngbPaginationNext>
-          <div class="d-flex">
-            Suivant
-            <ng-icon
-              name="bootstrapChevronRight"
-              size=""
-              class="ms-2"
-            ></ng-icon>
-          </div>
-        </ng-template>
-      </ngb-pagination>
-    </div>
+    <ng-template #newsCards>
+      <app-preview-card
+        *ngFor="let article of news"
+        [article]="article"
+        class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
+      ></app-preview-card>
+    </ng-template>
+  </div>
+
+  <div class="sb-pagination">
+    <ngb-pagination
+      id="articles-pagination"
+      class="d-flex justify-content-center"
+      [collectionSize]="newsCount"
+      [maxSize]="MAXIMUM_PAGES"
+      [(page)]="currentPage"
+      [pageSize]="ITEMS_PER_PAGE"
+      [rotate]="true"
+    >
+      <ng-template ngbPaginationPrevious>
+        <div class="d-flex">
+          <ng-icon name="bootstrapChevronLeft" size="" class="me-2"></ng-icon>
+          Précédent
+        </div>
+      </ng-template>
+      <ng-template ngbPaginationNext>
+        <div class="d-flex">
+          Suivant
+          <ng-icon name="bootstrapChevronRight" size="" class="ms-2"></ng-icon>
+        </div>
+      </ng-template>
+    </ngb-pagination>
   </div>
 </div>

@@ -2,11 +2,20 @@
   <h1 class="sb-title">Dernières nouveautés</h1>
 
   <div class="row">
-    <app-preview-card
-      *ngFor="let article of updates"
-      [article]="article"
-      class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
-    ></app-preview-card>
+    <ng-template [ngIf]="loading" [ngIfElse]="updatesCards">
+      <app-loading-card
+        *ngFor="let _ of loadingArray"
+        class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
+      ></app-loading-card>
+    </ng-template>
+
+    <ng-template #updatesCards>
+      <app-preview-card
+        *ngFor="let article of updates"
+        [article]="article"
+        class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
+      ></app-preview-card>
+    </ng-template>
   </div>
 
   <div class="sb-pagination">

@@ -21,8 +21,9 @@ export class UpdatesComponent implements OnInit {
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
   private _currentPage: number = 1;
+  private _loading: boolean = true;
   private _updates: Article[] = [];
-  private _updatesCount: number = 0;
+  private _updatesCount: number = this.ITEMS_PER_PAGE;
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                        CONSTRUCTORS                         *|
@@ -38,6 +39,8 @@ export class UpdatesComponent implements OnInit {
       .execute();
 
     this._updatesCount = this._updates.length;
+
+    this._loading = false;
   }
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
@@ -50,6 +53,14 @@ export class UpdatesComponent implements OnInit {
 
   public get currentPage(): number {
     return this._currentPage;
+  }
+
+  public get loading(): boolean {
+    return this._loading;
+  }
+
+  public get loadingArray(): number[] {
+    return Array.from({ length: this.ITEMS_PER_PAGE }, (_, i) => i + 1);
   }
 
   public get updates(): Article[] {
