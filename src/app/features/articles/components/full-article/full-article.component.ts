@@ -17,6 +17,7 @@ export class FullArticleComponent implements OnInit {
 
   private _article: Article | null = null;
   private _headerUrl: string | null = null;
+  private _loading: boolean = true;
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                        CONSTRUCTORS                         *|
@@ -37,6 +38,8 @@ export class FullArticleComponent implements OnInit {
     if (this.article && this.article.headerIcon) {
       this._headerUrl = await this.article.generateImageUrl();
     }
+
+    this._loading = false;
   }
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
@@ -74,6 +77,10 @@ export class FullArticleComponent implements OnInit {
 
   public get isHeaderImage(): boolean {
     return !!this._headerUrl;
+  }
+
+  public get loading(): boolean {
+    return this._loading;
   }
 
   public get publishedAt(): string {

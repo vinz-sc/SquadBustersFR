@@ -50,20 +50,21 @@
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.scss", "src/styles-pagination.scss"],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": ["@vinz-sc/squadbustersfr-api"]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "3kb",
+                  "maximumError": "5kb"
                 }
               ],
               "fileReplacements": [
