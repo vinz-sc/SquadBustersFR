@@ -20,7 +20,6 @@ export class CoreService {
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
   private readonly _api: SquadBustersFRApi;
-  private _preferredTheme?: 'dark' | 'light';
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                        CONSTRUCTORS                         *|
@@ -63,5 +62,17 @@ export class CoreService {
         'https://www.tiktok.com/@vadowki'
       ),
     ];
+  }
+
+  public get preferredTheme(): 'light' | 'dark' | null {
+    return localStorage.getItem(this.SESSION_KEY) as 'light' | 'dark' | null;
+  }
+
+  /* * * * * * * * * * * * * * * *\
+  |*           SETTERS           *|
+  \* * * * * * * * * * * * * * * */
+
+  public set preferredTheme(value: 'light' | 'dark') {
+    localStorage.setItem(this.SESSION_KEY, value);
   }
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CoreService } from '../../core/services/core.service';
+
 @Component({
   selector: 'app-theme-switcher',
   templateUrl: './theme-switcher.component.html',
@@ -16,15 +18,22 @@ export class ThemeSwitcherComponent implements OnInit {
   |*                        CONSTRUCTORS                         *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-  // TODO: Inject CoreService to get and save user's theme preference
-  // constructor(private readonly _coreService: any) {}
+  constructor(private readonly _coreService: CoreService) {}
 
   ngOnInit(): void {
     const deviceMode: MediaQueryList = window.matchMedia(
       '(prefers-color-scheme: dark)'
     );
 
-    this._isDarkTheme = deviceMode.matches;
+    const localTheme = this._coreService.preferredTheme;
+
+    if (localTheme) {
+      this._isDarkTheme = localTheme === 'dark';
+    } else {
+      this._isDarkTheme = deviceMode.matches;
+      this._coreService.preferredTheme = this._isDarkTheme ? 'dark' : 'light';
+    }
+
     this._updateBodyTheme();
   }
 
@@ -46,6 +55,7 @@ export class ThemeSwitcherComponent implements OnInit {
 
   public set isDarkTheme(value: boolean) {
     this._isDarkTheme = value;
+    this._coreService.preferredTheme = this._isDarkTheme ? 'dark' : 'light';
     this._updateBodyTheme();
   }
 
