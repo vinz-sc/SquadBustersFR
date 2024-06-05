@@ -5,6 +5,8 @@ import { RouterModule } from '@angular/router';
 
 import {
   bootstrapDiscord,
+  bootstrapFileTextFill,
+  bootstrapGlobe,
   bootstrapList,
   bootstrapMoonStarsFill,
   bootstrapSunFill,
@@ -32,6 +34,8 @@ import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.componen
     FormsModule,
     NgIconsModule.withIcons({
       bootstrapDiscord,
+      bootstrapFileTextFill,
+      bootstrapGlobe,
       bootstrapList,
       bootstrapMoonStarsFill,
       bootstrapSunFill,
