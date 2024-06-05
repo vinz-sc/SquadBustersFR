@@ -131,6 +131,12 @@ body {
       --sb-btn-color: var(--sb-bg-color);
     }
 
+    &.sb-btn-tertiary {
+      --sb-btn-bg-color: var(--sb-tertiary-color);
+      --sb-btn-bg-color-hover: var(--sb-tertiary-color-hover);
+      --sb-btn-color: var(--sb-black);
+    }
+
     &:active {
       box-shadow: none;
       transform: translateY(3px);
