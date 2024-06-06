@@ -1,5 +1,5 @@
 <div class="sb-card">
-  <div class="sb-img">
+  <div class="sb-header">
     <img [src]="creator?.logoPath" alt="Profile picture" />
   </div>
   <div class="sb-details">
@@ -30,5 +30,13 @@
         <ng-icon name="bootstrapTiktok" size=""></ng-icon>
       </a>
     </div>
+    <a
+      [href]="creator?.storeUrl"
+      class="sb-btn sb-creator-logo"
+      target="_blank"
+    >
+      <img src="assets/creator.png" alt="Creator logo" />
+      Store Supercell
+    </a>
   </div>
 </div>

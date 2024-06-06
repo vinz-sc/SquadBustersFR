@@ -146,6 +146,11 @@ body {
       background-color: var(--sb-btn-bg-color-hover);
     }
   }
+
+  .sb-article-content img,
+  .sb-article-content iframe {
+    max-width: 100%;
+  }
 }
 
 /* Importing Bootstrap SCSS file. */

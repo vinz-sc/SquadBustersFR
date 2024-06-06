@@ -45,22 +45,19 @@ export class CoreService {
     return [
       new Creator(
         'Mateo26',
-        'https://x.com/Mateo26__',
-        null,
-        'https://www.tiktok.com/@mateo26.crfr'
+        'mateo26',
+        'Mateo26__',
+        '@Mateo26_',
+        '@mateo26.crfr'
       ),
       new Creator(
         'Spartafail',
-        'https://x.com/Spartafail',
-        'https://www.youtube.com/@spartafail',
-        'https://www.tiktok.com/@spartafailcoc'
+        'Spartafail',
+        'Spartafail',
+        '@spartafail',
+        '@spartafailcoc'
       ),
-      new Creator(
-        'Vadowki',
-        'https://x.com/vadowki',
-        'https://www.youtube.com/@VadowkiSB',
-        'https://www.tiktok.com/@vadowki'
-      ),
+      new Creator('Vadowki', 'vadowki', 'vadowki', '@VadowkiSB', '@vadowki'),
     ];
   }
 

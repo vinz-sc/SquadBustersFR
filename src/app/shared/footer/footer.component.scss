@@ -33,12 +33,17 @@ footer {
   .sb-links {
     display: flex;
 
-    gap: 5rem;
+    flex-wrap: wrap;
+
+    width: 100%;
 
     a {
       display: flex;
 
       align-items: center;
+      justify-content: center;
+
+      margin-bottom: 0.5rem;
 
       color: rgba(var(--sb-color-rgb), 0.8);
 

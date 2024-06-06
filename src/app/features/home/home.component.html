@@ -74,17 +74,18 @@
   </div>
 </div>
 
-<div class="sb-container">
-  <h1 class="sb-title">Les différents créateurs SquadBusters FR</h1>
+<div class="sb-container mt-5">
+  <h1 class="sb-title">Les créateurs SquadBusters FR</h1>
 
-  <div class="sb-creators">
+  <div class="sb-creators row">
     <app-creator-card
       *ngFor="let creator of creators"
+      class="col-12 col-sm-6 col-lg-4 mb-4"
       [creator]="creator"
     ></app-creator-card>
   </div>
 
-  <h1 class="sb-title mb-3">Les codes créateurs</h1>
+  <h1 class="sb-title mb-0">Les codes créateurs</h1>
 
   <img
     class="w-100"

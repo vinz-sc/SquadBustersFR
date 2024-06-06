@@ -169,13 +169,9 @@
 }
 
 .sb-creators {
-  display: flex;
-
-  flex-wrap: wrap;
-  gap: 1rem;
   justify-content: center;
 
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 @keyframes scroll-linear {
@@ -185,5 +181,11 @@
 
   100% {
     background-position: 0 100%;
+  }
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .sb-header-bg {
+    background-attachment: scroll !important;
   }
 }

@@ -4,9 +4,10 @@ export class Creator {
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
   private readonly _username: string;
-  private readonly _twitter: string | null;
-  private readonly _youTube: string | null;
-  private readonly _tikTok: string | null;
+  private readonly _code: string;
+  private readonly _twitterId: string | null;
+  private readonly _youTubeId: string | null;
+  private readonly _tikTokId: string | null;
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                        CONSTRUCTORS                         *|
@@ -14,16 +15,18 @@ export class Creator {
 
   constructor(
     username: string,
-    twitter: string | null,
-    youTube: string | null,
-    tikTok: string | null
+    code: string,
+    twitterId: string | null,
+    youTubeId: string | null,
+    tikTokId: string | null
   ) {
     // Inputs
     {
       this._username = username;
-      this._twitter = twitter;
-      this._youTube = youTube;
-      this._tikTok = tikTok;
+      this._code = code;
+      this._twitterId = twitterId;
+      this._youTubeId = youTubeId;
+      this._tikTokId = tikTokId;
     }
   }
 
@@ -35,23 +38,27 @@ export class Creator {
   |*           GETTERS           *|
   \* * * * * * * * * * * * * * * */
 
-  get username(): string {
+  public get username(): string {
     return this._username;
   }
 
-  get logoPath(): string {
+  public get logoPath(): string {
     return `assets/images/creators/${this._username.toLowerCase()}.png`;
   }
 
-  get twitter(): string | null {
-    return this._twitter;
+  public get storeUrl(): string {
+    return `https://store.supercell.com/fr?boost=${this._code}`;
   }
 
-  get youTube(): string | null {
-    return this._youTube;
+  public get tikTok(): string | null {
+    return `https://tiktok.com/${this._tikTokId}`;
   }
 
-  get tikTok(): string | null {
-    return this._tikTok;
+  public get twitter(): string | null {
+    return `https://x.com/${this._twitterId}`;
+  }
+
+  public get youTube(): string | null {
+    return `https://youtube.com/${this._youTubeId}`;
   }
 }
