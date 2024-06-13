@@ -1,0 +1,52 @@
+.sb-modal {
+  padding: 2rem 2rem 1rem 2rem;
+
+  background-color: var(--sb-bg-color);
+  color: var(--sb-color);
+
+  border-radius: 5px;
+
+  .sb-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-bottom: 0.75rem;
+
+    .sb-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+
+      font-family: "SquadLatinBold", sans-serif;
+    }
+
+    .sb-close {
+      background-color: transparent;
+      color: rgba(var(--sb-color-rgb), 0.8) !important;
+
+      border: none;
+
+      outline: none;
+
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: var(--sb-color) !important;
+      }
+    }
+  }
+
+  .sb-body {
+    margin-bottom: 1.25rem;
+
+    color: rgba(var(--sb-color-rgb), 0.8);
+
+    font-size: 0.85rem;
+  }
+
+  .sb-footer {
+    display: flex;
+
+    justify-content: flex-end;
+  }
+}

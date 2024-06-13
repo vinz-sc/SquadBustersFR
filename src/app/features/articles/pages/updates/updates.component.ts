@@ -13,7 +13,7 @@ export class UpdatesComponent implements OnInit {
   |*                          CONSTANTS                          *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-  public readonly ITEMS_PER_PAGE: number = 8;
+  public readonly ITEMS_PER_PAGE: number = 9;
   public readonly MAXIMUM_PAGES: number = 5;
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
@@ -46,6 +46,10 @@ export class UpdatesComponent implements OnInit {
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                           PUBLIC                            *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+  public scrollToTop(): void {
+    window.scrollTo(0, 0);
+  }
 
   /* * * * * * * * * * * * * * * *\
   |*           GETTERS           *|

@@ -13,7 +13,8 @@ export class CoreService {
   |*                          CONSTANTS                          *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-  private readonly SESSION_KEY = 'squadbustersfr-theme';
+  private readonly SESSION_THEME_KEY = 'squadbustersfr-theme';
+  private readonly SESSION_COOKIE_KEY = 'squadbustersfr-cookies';
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                          PROPERTIES                         *|
@@ -32,6 +33,10 @@ export class CoreService {
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                           PUBLIC                            *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+  public acceptCookies() {
+    localStorage.setItem(this.SESSION_COOKIE_KEY, 'true');
+  }
 
   /* * * * * * * * * * * * * * * *\
   |*           GETTERS           *|
@@ -61,8 +66,15 @@ export class CoreService {
     ];
   }
 
+  public get isCookiesAccepted(): boolean {
+    return !!localStorage.getItem(this.SESSION_COOKIE_KEY);
+  }
+
   public get preferredTheme(): 'light' | 'dark' | null {
-    return localStorage.getItem(this.SESSION_KEY) as 'light' | 'dark' | null;
+    return localStorage.getItem(this.SESSION_THEME_KEY) as
+      | 'light'
+      | 'dark'
+      | null;
   }
 
   /* * * * * * * * * * * * * * * *\
@@ -70,6 +82,6 @@ export class CoreService {
   \* * * * * * * * * * * * * * * */
 
   public set preferredTheme(value: 'light' | 'dark') {
-    localStorage.setItem(this.SESSION_KEY, value);
+    localStorage.setItem(this.SESSION_THEME_KEY, value);
   }
 }

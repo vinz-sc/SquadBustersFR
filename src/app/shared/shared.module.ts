@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import {
   bootstrapDiscord,
   bootstrapFileTextFill,
@@ -15,16 +16,20 @@ import {
 } from '@ng-icons/bootstrap-icons';
 import { NgIconsModule } from '@ng-icons/core';
 
+import { CookiesComponent } from './cookies/cookies.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { ModalCookiesComponent } from './modal-cookies/modal-cookies.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SeparatorComponent } from './separator/separator.component';
 import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.component';
 
 @NgModule({
   declarations: [
+    CookiesComponent,
     FooterComponent,
     HeaderComponent,
+    ModalCookiesComponent,
     NotFoundComponent,
     ThemeSwitcherComponent,
     SeparatorComponent,
@@ -32,6 +37,7 @@ import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.componen
   imports: [
     CommonModule,
     FormsModule,
+    NgbModalModule,
     NgIconsModule.withIcons({
       bootstrapDiscord,
       bootstrapFileTextFill,
@@ -45,6 +51,7 @@ import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.componen
     RouterModule,
   ],
   exports: [
+    CookiesComponent,
     FooterComponent,
     HeaderComponent,
     NotFoundComponent,

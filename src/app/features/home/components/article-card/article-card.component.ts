@@ -21,8 +21,8 @@ export class ArticleCardComponent implements OnInit {
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
   async ngOnInit(): Promise<void> {
-    if (this.article && this.article.headerIcon) {
-      this._headerUrl = await this.article.generateImageUrl();
+    if (this.article) {
+      this._headerUrl = this.article.headerImageUrl;
     }
   }
 

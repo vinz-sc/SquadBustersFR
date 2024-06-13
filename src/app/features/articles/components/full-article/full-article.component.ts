@@ -35,8 +35,8 @@ export class FullArticleComponent implements OnInit {
       .getByUrl(url)
       .execute();
 
-    if (this.article && this.article.headerIcon) {
-      this._headerUrl = await this.article.generateImageUrl();
+    if (this._article) {
+      this._headerUrl = this._article.headerImageUrl;
     }
 
     this._loading = false;

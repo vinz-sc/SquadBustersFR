@@ -15,13 +15,14 @@ export class HomeComponent implements OnInit {
   |*                          CONSTANTS                          *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-  private readonly ARTICLES_ON_HOME = 4;
+  private readonly ARTICLES_ON_HOME = '3';
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                          PROPERTIES                         *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-  private _articles: Article[] = [];
+  private _latestNews: Article[] = [];
+  private _latestUpdates: Article[] = [];
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                        CONSTRUCTORS                         *|
@@ -30,12 +31,19 @@ export class HomeComponent implements OnInit {
   constructor(private readonly _coreService: CoreService) {}
 
   async ngOnInit(): Promise<void> {
-    const articles = await this._coreService.api.articles
+    this._latestNews = await this._coreService.api.articles
       .get()
+      .addParam('type', 'news')
       .addParam('published', 'true')
+      .addParam('limit', this.ARTICLES_ON_HOME)
       .execute();
 
-    this._articles = articles.slice(0, this.ARTICLES_ON_HOME);
+    this._latestUpdates = await this._coreService.api.articles
+      .get()
+      .addParam('type', 'sneakPeek')
+      .addParam('published', 'true')
+      .addParam('limit', this.ARTICLES_ON_HOME)
+      .execute();
   }
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
@@ -46,11 +54,15 @@ export class HomeComponent implements OnInit {
   |*           GETTERS           *|
   \* * * * * * * * * * * * * * * */
 
-  public get articles(): Article[] {
-    return this._articles;
-  }
-
   public get creators(): Creator[] {
     return this._coreService.creators;
+  }
+
+  public get latestNews(): Article[] {
+    return this._latestNews;
+  }
+
+  public get latestUpdates(): Article[] {
+    return this._latestUpdates;
   }
 }

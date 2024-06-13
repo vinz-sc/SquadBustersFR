@@ -5,7 +5,7 @@
     <ng-template [ngIf]="loading" [ngIfElse]="newsCards">
       <app-loading-card
         *ngFor="let _ of loadingArray"
-        class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
+        class="col-12 col-md-6 col-lg-4 mb-4"
       ></app-loading-card>
     </ng-template>
 
@@ -13,7 +13,7 @@
       <app-preview-card
         *ngFor="let article of news"
         [article]="article"
-        class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
+        class="col-12 col-md-6 col-lg-4 mb-4"
       ></app-preview-card>
     </ng-template>
   </div>
@@ -29,13 +29,13 @@
       [rotate]="true"
     >
       <ng-template ngbPaginationPrevious>
-        <div class="d-flex">
+        <div class="d-flex" (click)="scrollToTop()">
           <ng-icon name="bootstrapChevronLeft" size="" class="me-2"></ng-icon>
           Précédent
         </div>
       </ng-template>
       <ng-template ngbPaginationNext>
-        <div class="d-flex">
+        <div class="d-flex" (click)="scrollToTop()">
           Suivant
           <ng-icon name="bootstrapChevronRight" size="" class="ms-2"></ng-icon>
         </div>
