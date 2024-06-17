@@ -6,8 +6,6 @@ import { RouterModule } from '@angular/router';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import {
   bootstrapDiscord,
-  bootstrapFileTextFill,
-  bootstrapGlobe,
   bootstrapList,
   bootstrapMoonStarsFill,
   bootstrapSunFill,
@@ -40,8 +38,6 @@ import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.componen
     NgbModalModule,
     NgIconsModule.withIcons({
       bootstrapDiscord,
-      bootstrapFileTextFill,
-      bootstrapGlobe,
       bootstrapList,
       bootstrapMoonStarsFill,
       bootstrapSunFill,

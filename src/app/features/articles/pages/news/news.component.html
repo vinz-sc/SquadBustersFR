@@ -1,45 +1,57 @@
-<div class="sb-container">
-  <h1 class="sb-title">Dernières actualités</h1>
+<div class="sb-header-bg">
+  <app-separator></app-separator>
+</div>
 
-  <div class="row">
-    <ng-template [ngIf]="loading" [ngIfElse]="newsCards">
-      <app-loading-card
-        *ngFor="let _ of loadingArray"
-        class="col-12 col-md-6 col-lg-4 mb-4"
-      ></app-loading-card>
-    </ng-template>
+<div class="sb-content-separator">
+  <app-separator></app-separator>
 
-    <ng-template #newsCards>
-      <app-preview-card
-        *ngFor="let article of news"
-        [article]="article"
-        class="col-12 col-md-6 col-lg-4 mb-4"
-      ></app-preview-card>
-    </ng-template>
-  </div>
+  <div class="sb-container">
+    <h1 class="sb-title">Dernières actus</h1>
 
-  <div class="sb-pagination">
-    <ngb-pagination
-      id="articles-pagination"
-      class="d-flex justify-content-center"
-      [collectionSize]="newsCount"
-      [maxSize]="MAXIMUM_PAGES"
-      [(page)]="currentPage"
-      [pageSize]="ITEMS_PER_PAGE"
-      [rotate]="true"
-    >
-      <ng-template ngbPaginationPrevious>
-        <div class="d-flex" (click)="scrollToTop()">
-          <ng-icon name="bootstrapChevronLeft" size="" class="me-2"></ng-icon>
-          Précédent
-        </div>
+    <div class="row">
+      <ng-template [ngIf]="loading" [ngIfElse]="newsCards">
+        <app-loading-card
+          *ngFor="let _ of loadingArray"
+          class="col-12 col-md-6 col-lg-4 mb-4"
+        ></app-loading-card>
       </ng-template>
-      <ng-template ngbPaginationNext>
-        <div class="d-flex" (click)="scrollToTop()">
-          Suivant
-          <ng-icon name="bootstrapChevronRight" size="" class="ms-2"></ng-icon>
-        </div>
+
+      <ng-template #newsCards>
+        <app-preview-card
+          *ngFor="let article of news"
+          [article]="article"
+          class="col-12 col-md-6 col-lg-4 mb-4"
+        ></app-preview-card>
       </ng-template>
-    </ngb-pagination>
+    </div>
+
+    <div class="sb-pagination">
+      <ngb-pagination
+        id="articles-pagination"
+        class="d-flex justify-content-center"
+        [collectionSize]="newsCount"
+        [maxSize]="MAXIMUM_PAGES"
+        [(page)]="currentPage"
+        [pageSize]="ITEMS_PER_PAGE"
+        [rotate]="true"
+      >
+        <ng-template ngbPaginationPrevious>
+          <div class="d-flex" (click)="scrollToTop()">
+            <ng-icon name="bootstrapChevronLeft" size="" class="me-2"></ng-icon>
+            Précédent
+          </div>
+        </ng-template>
+        <ng-template ngbPaginationNext>
+          <div class="d-flex" (click)="scrollToTop()">
+            Suivant
+            <ng-icon
+              name="bootstrapChevronRight"
+              size=""
+              class="ms-2"
+            ></ng-icon>
+          </div>
+        </ng-template>
+      </ngb-pagination>
+    </div>
   </div>
 </div>

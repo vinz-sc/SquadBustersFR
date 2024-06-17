@@ -25,98 +25,68 @@
     </div>
   </div>
 
-  <div class="sb-separator">
-    <app-separator class="w-100"></app-separator>
-  </div>
-  <div class="sb-separator sb-reversed">
-    <app-separator class="w-100"></app-separator>
-  </div>
+  <app-separator></app-separator>
 </div>
 
-<div class="sb-container sb-articles">
-  <h1 class="sb-title">Les dernières publications</h1>
+<div class="sb-articles">
+  <app-separator class="sb-top"></app-separator>
 
-  <div class="row">
-    <app-article-card
-      *ngFor="let article of latestNews"
-      [article]="article"
-      class="col-12 col-md-6 col-lg-4 mb-4"
-    ></app-article-card>
-  </div>
-
-  <a class="sb-link" routerLink="/news">
-    Voir les actualités
-    <ng-icon name="bootstrapChevronRight" size="" class="ms-2"></ng-icon>
-  </a>
-
-  <div class="row">
-    <app-article-card
-      *ngFor="let article of latestUpdates"
-      [article]="article"
-      class="col-12 col-md-6 col-lg-4 mb-4"
-    ></app-article-card>
-  </div>
-
-  <a class="sb-link" routerLink="/updates">
-    Voir les mises à jour
-    <ng-icon name="bootstrapChevronRight" size="" class="ms-2"></ng-icon>
-  </a>
-</div>
-
-<div class="sb-download">
   <div class="sb-gradient"></div>
-  <div class="sb-container">
-    <img class="sb-icon-app" src="assets/icon-app.png" alt="App icon" />
-    <div class="sb-details">
-      <h2 class="sb-title">Téléchargez et jouez dès maintenant !</h2>
 
-      <div class="sb-buttons">
-        <a
-          class="sb-btn sb-btn-primary"
-          href="https://play.google.com/store/apps/details?id=com.supercell.squad"
-          target="_blank"
-        >
-          <ng-icon name="bootstrapGooglePlay" size="" class="me-2"></ng-icon>
-          Google Play
-        </a>
-        <a
-          class="sb-btn sb-btn-primary"
-          href="https://apps.apple.com/fr/app/squad-busters/id1668983788"
-          target="_blank"
-        >
-          <ng-icon name="bootstrapApple" size="" class="me-2"></ng-icon>
-          App Store
-        </a>
+  <div class="sb-articles-content">
+    <div class="sb-container">
+      <h1 class="sb-title">Les dernières publications</h1>
+
+      <div class="row">
+        <app-article-card
+          *ngFor="let article of latestNews"
+          [article]="article"
+          class="col-12 col-md-6 col-lg-4 mb-4"
+        ></app-article-card>
+      </div>
+
+      <a class="sb-link" routerLink="/news">
+        Voir les actus
+        <ng-icon name="bootstrapChevronRight" size="" class="ms-2"></ng-icon>
+      </a>
+
+      <div class="row">
+        <app-article-card
+          *ngFor="let article of latestUpdates"
+          [article]="article"
+          class="col-12 col-md-6 col-lg-4 mb-4"
+        ></app-article-card>
+      </div>
+
+      <a class="sb-link" routerLink="/updates">
+        Voir les mises à jour
+        <ng-icon name="bootstrapChevronRight" size="" class="ms-2"></ng-icon>
+      </a>
+    </div>
+  </div>
+
+  <app-separator></app-separator>
+</div>
+
+<div class="sb-creators">
+  <app-separator class="sb-top"></app-separator>
+
+  <div class="sb-gradient"></div>
+
+  <div class="sb-creators-content">
+    <div class="sb-container">
+      <h1 class="sb-title">Les créateurs SquadBusters FR</h1>
+
+      <div class="row">
+        <app-creator-card
+          *ngFor="let creator of creators"
+          class="col-12 col-sm-6 col-lg-4 mb-4"
+          [creator]="creator"
+        ></app-creator-card>
       </div>
     </div>
   </div>
-</div>
 
-<div class="sb-container mt-5">
-  <h1 class="sb-title">Les créateurs SquadBusters FR</h1>
-
-  <div class="sb-creators row">
-    <app-creator-card
-      *ngFor="let creator of creators"
-      class="col-12 col-sm-6 col-lg-4 mb-4"
-      [creator]="creator"
-    ></app-creator-card>
-  </div>
-
-  <h1 class="sb-title mb-0">Les codes créateurs</h1>
-
-  <img
-    class="w-100"
-    src="assets/images/creator_codes.png"
-    alt="Codes créateurs SquadBusters"
-  />
-</div>
-
-<div class="sb-separators">
-  <div class="sb-separator">
-    <app-separator class="w-100"></app-separator>
-  </div>
-  <div class="sb-separator sb-reversed">
-    <app-separator class="w-100"></app-separator>
-  </div>
+  <app-separator></app-separator>
+  <!-- <app-separator class="sb-reversed"></app-separator> -->
 </div>

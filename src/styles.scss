@@ -9,8 +9,11 @@
 }
 
 :root {
-  --sb-black: rgb(34, 39, 43);
-  --sb-white: rgb(241, 242, 244);
+  --sb-black-rgb: 34, 39, 43;
+  --sb-white-rgb: 241, 242, 244;
+
+  --sb-black: rgb(var(--sb-black-rgb));
+  --sb-white: rgb(var(--sb-white-rgb));
 }
 
 @mixin darken() {
@@ -76,6 +79,41 @@ body {
   color: var(--sb-color) !important;
 
   font-family: "SquadLatin", sans-serif !important;
+
+  .sb-header-bg {
+    position: relative;
+
+    height: 200px;
+
+    app-separator {
+      position: absolute;
+
+      bottom: 0;
+
+      width: 100%;
+      transform: translateY(1px);
+    }
+  }
+
+  .sb-content-separator {
+    position: relative;
+    padding-top: 100px;
+
+    app-separator {
+      position: absolute;
+
+      top: 0;
+
+      width: 100%;
+
+      transform: rotate(180deg) translateY(calc(100% + 1px));
+      transform-origin: bottom center;
+    }
+
+    .sb-container {
+      margin-top: 0;
+    }
+  }
 
   .sb-container {
     position: relative;
@@ -150,6 +188,14 @@ body {
   .sb-article-content img,
   .sb-article-content iframe {
     max-width: 100%;
+  }
+
+  .carousel-inner {
+    height: 100%;
+
+    div {
+      height: 100%;
+    }
   }
 }
 

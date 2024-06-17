@@ -2,9 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import {
-  bootstrapApple,
   bootstrapChevronRight,
-  bootstrapGooglePlay,
   bootstrapTiktok,
   bootstrapTwitterX,
   bootstrapYoutube,
@@ -27,9 +25,7 @@ import { CreatorCardComponent } from './components/creator-card/creator-card.com
     CoreModule,
     HomeRoutingModule,
     NgIconsModule.withIcons({
-      bootstrapApple,
       bootstrapChevronRight,
-      bootstrapGooglePlay,
       bootstrapTiktok,
       bootstrapTwitterX,
       bootstrapYoutube,

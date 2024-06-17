@@ -1,3 +1,20 @@
+.sb-header-bg {
+  background-attachment: fixed;
+  background-image: url("/assets/images/header.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sb-content {
+  position: relative;
+  padding-top: 100px;
+
+  .sb-container {
+    margin-top: 0;
+  }
+}
+
 .sb-title {
   margin-bottom: 3rem;
 

@@ -1,30 +1,39 @@
-<ng-template *ngIf="loading; else articleContent"></ng-template>
+<div class="sb-header-bg">
+  <app-separator></app-separator>
+</div>
 
-<ng-template #articleContent>
-  <div *ngIf="article; else notFound" class="sb-container">
-    <a class="sb-back sb-btn" [routerLink]="backUrl">
-      <ng-icon name="bootstrapChevronDoubleLeft" size=""></ng-icon>
-    </a>
+<div class="sb-content-separator">
+  <app-separator></app-separator>
 
-    <h1 class="sb-title">{{ article.title }}</h1>
-    <div class="sb-subtitle">{{ publishedAt }}</div>
+  <ng-template *ngIf="loading; else articleContent"></ng-template>
 
-    <div class="sb-header">
-      <img *ngIf="isHeaderImage" [src]="headerUrl" alt=" " />
-      <iframe
-        *ngIf="!isHeaderImage"
-        [src]="youTubeUrl"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
+  <ng-template #articleContent>
+    <div *ngIf="article; else notFound" class="sb-container">
+      <a class="sb-back sb-btn" [routerLink]="backUrl">
+        <ng-icon name="bootstrapChevronDoubleLeft" size=""></ng-icon>
+      </a>
+
+      <h1 class="sb-title">{{ article.title }}</h1>
+
+      <div class="sb-header">
+        <img *ngIf="isHeaderImage" [src]="headerUrl" alt=" " />
+        <iframe
+          *ngIf="!isHeaderImage"
+          [src]="youTubeUrl"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <div class="sb-article-content" [innerHTML]="content"></div>
+
+      <div class="sb-subtitle">{{ publishedAt }}</div>
     </div>
+  </ng-template>
 
-    <div class="sb-article-content" [innerHTML]="content"></div>
-  </div>
-</ng-template>
-
-<ng-template #notFound>
-  <app-not-found></app-not-found>
-</ng-template>
+  <ng-template #notFound>
+    <app-not-found></app-not-found>
+  </ng-template>
+</div>

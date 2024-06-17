@@ -1,3 +1,11 @@
+.sb-header-bg {
+  background-attachment: fixed;
+  background-image: url("/assets/images/header.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .sb-back {
   position: absolute;
 }
@@ -22,15 +30,15 @@
 }
 
 .sb-subtitle {
-  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
 
   color: rgba(var(--sb-color-rgb), 0.8);
 
-  text-align: center;
+  text-align: right;
 }
 
 .sb-header {
-  width: clamp(280px, 100%, 840px);
+  width: clamp(300px, 100%, 850px);
 
   margin: 0 auto;
 
@@ -49,7 +57,7 @@
 }
 
 .sb-article-content {
-  max-width: 42rem;
+  max-width: 45rem;
 
   margin: 4rem auto auto;
 }
