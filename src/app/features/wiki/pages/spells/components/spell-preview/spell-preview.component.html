@@ -1,0 +1,9 @@
+<a class="sb-card" [routerLink]="link">
+  <div class="sb-spell">
+    <img class="sb-bg" [src]="backgroundImageUrl" alt="Background" />
+    <img class="sb-icon" [src]="spell?.iconUrl" [alt]="spell?.name" />
+  </div>
+  <div class="sb-header">
+    <h3 class="sb-title">{{ spell?.name }}</h3>
+  </div>
+</a>
