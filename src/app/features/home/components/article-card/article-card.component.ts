@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Article } from '@vinz-sc/squadbustersfr-api';
+import { Article, ArticleType } from '@vinz-sc/squadbustersfr-api';
 
 @Component({
   selector: 'app-article-card',
@@ -68,9 +68,9 @@ export class ArticleCardComponent implements OnInit {
 
   private get _baseUrl(): string {
     switch (this.article?.type) {
-      case 'News':
+      case ArticleType.News:
         return '/news';
-      case 'SneakPeek':
+      case ArticleType.SneakPeek:
         return '/updates';
       default:
         return '/';

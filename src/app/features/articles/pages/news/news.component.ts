@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Article } from '@vinz-sc/squadbustersfr-api';
+import { Article, ArticleType } from '@vinz-sc/squadbustersfr-api';
 
 import { CoreService } from '../../../../core/services/core.service';
 
@@ -33,9 +33,8 @@ export class NewsComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this._news = await this._coreService.api.articles
-      .get()
-      .addParam('type', 'news')
-      .addParam('published', 'true')
+      .getAll()
+      .addParam('type', ArticleType.News)
       .execute();
 
     this._newsCount = this._news.length;

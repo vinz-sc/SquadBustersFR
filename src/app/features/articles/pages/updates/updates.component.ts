@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Article } from '@vinz-sc/squadbustersfr-api';
+import { Article, ArticleType } from '@vinz-sc/squadbustersfr-api';
 
 import { CoreService } from '../../../../core/services/core.service';
 
@@ -33,9 +33,8 @@ export class UpdatesComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this._updates = await this._coreService.api.articles
-      .get()
-      .addParam('type', 'sneakPeek')
-      .addParam('published', 'true')
+      .getAll()
+      .addParam('type', ArticleType.SneakPeek)
       .execute();
 
     this._updatesCount = this._updates.length;

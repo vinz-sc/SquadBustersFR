@@ -12,8 +12,65 @@
   --sb-black-rgb: 34, 39, 43;
   --sb-white-rgb: 241, 242, 244;
 
+  --sb-blue-light: #8dfefe;
+  --sb-blue: #05bdfd;
+
+  --sb-yellow-light: #fffd8a;
+  --sb-yellow: #ffd800;
+
+  --sb-purple-light: #fbaafe;
+  --sb-purple: #bc26c5;
+
+  --sb-red-light: #ff4d4d;
+  --sb-red: #d60000;
+
+  --sb-platinum-light: #e5e4e2;
+  --sb-platinum: #b3b2b1;
+
   --sb-black: rgb(var(--sb-black-rgb));
   --sb-white: rgb(var(--sb-white-rgb));
+
+  --sb-common: var(--sb-blue);
+  --sb-common-gradient: linear-gradient(
+    45deg,
+    var(--sb-blue-light),
+    var(--sb-blue)
+  );
+  --sb-small: var(--sb-common);
+  --sb-small-gradient: var(--sb-common-gradient);
+
+  --sb-rare: var(--sb-yellow);
+  --sb-rare-gradient: linear-gradient(
+    45deg,
+    var(--sb-yellow-light),
+    var(--sb-yellow)
+  );
+  --sb-medium: var(--sb-rare);
+  --sb-medium-gradient: var(--sb-rare-gradient);
+
+  --sb-epic: var(--sb-purple);
+  --sb-epic-gradient: linear-gradient(
+    45deg,
+    var(--sb-purple-light),
+    var(--sb-purple)
+  );
+  --sb-big: var(--sb-epic);
+  --sb-big-gradient: var(--sb-epic-gradient);
+
+  --sb-legendary: var(--sb-red);
+  --sb-legendary-gradient: linear-gradient(
+    45deg,
+    var(--sb-red-light),
+    var(--sb-red)
+  );
+  --sb-boss: var(--sb-legendary);
+  --sb-boss-gradient: var(--sb-legendary-gradient);
+
+  --sb-special-gradient: linear-gradient(
+    45deg,
+    var(--sb-platinum-light),
+    var(--sb-platinum)
+  );
 }
 
 @mixin darken() {
@@ -43,9 +100,9 @@
 }
 
 @mixin lighten() {
-  --sb-bg-color-dark-rgb: 247, 248, 249; /* Neutral100 */
+  --sb-bg-color-dark-rgb: 220, 223, 228; /* Neutral300 */
   --sb-bg-color-rgb: 241, 242, 244; /* Neutral200 */
-  --sb-bg-color-light-rgb: 220, 223, 228; /* Neutral300 */
+  --sb-bg-color-light-rgb: 247, 248, 249; /* Neutral100 */
   --sb-color-rgb: 34, 39, 43; /* DarkNeutral200 */
   --sb-primary-color-rgb: 246, 202, 69;
   --sb-primary-color-hover-rgb: 248, 213, 106;

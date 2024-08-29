@@ -1,13 +1,23 @@
-<div class="sb-container">
-  <div class="sb-details">
-    <h1 class="sb-title">404</h1>
-    <h3 class="sb-subtitle">Oops, cette page n'existe pas</h3>
-    <div class="sb-description">
-      Nous ne savons pas comment vous avez atterri ici, mais vous devriez
-      retourner à la page d'accueil.
+<div *ngIf="!contentOnly" class="sb-header-bg">
+  <app-separator></app-separator>
+</div>
+
+<div
+  class="sb-content-separator"
+  [ngClass]="{ 'sb-content-only': contentOnly }"
+>
+  <app-separator *ngIf="!contentOnly"></app-separator>
+  <div class="sb-container" [ngClass]="{ 'sb-full-container': !contentOnly }">
+    <div class="sb-details">
+      <h1 class="sb-title">404</h1>
+      <h3 class="sb-subtitle">Oops, cette page n'existe pas</h3>
+      <div class="sb-description">
+        Nous ne savons pas comment vous avez atterri ici, mais vous devriez
+        retourner à la page d'accueil.
+      </div>
     </div>
-  </div>
-  <div class="sb-image">
-    <img src="assets/images/not_found.png" alt="404" />
+    <div class="sb-image">
+      <img src="assets/images/not_found.png" alt="404" />
+    </div>
   </div>
 </div>

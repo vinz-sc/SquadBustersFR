@@ -78,15 +78,18 @@
       <h1 class="sb-title">Les créateurs SquadBusters FR</h1>
 
       <div class="row">
-        <app-creator-card
-          *ngFor="let creator of creators"
-          class="col-12 col-sm-6 col-lg-4 mb-4"
-          [creator]="creator"
-        ></app-creator-card>
+        <div class="col-12 col-sm-6 col-lg-4 mb-4">
+          <app-creator-card [creator]="creators[0]"></app-creator-card>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 mb-4">
+          <app-creator-card [creator]="creators[1]"></app-creator-card>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 mb-4">
+          <app-creator-card [creator]="creators[2]"></app-creator-card>
+        </div>
       </div>
     </div>
   </div>
 
   <app-separator></app-separator>
-  <!-- <app-separator class="sb-reversed"></app-separator> -->
 </div>

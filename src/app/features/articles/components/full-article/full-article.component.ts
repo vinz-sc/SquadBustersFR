@@ -1,7 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeHtml, SafeUrl } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
-import { Article } from '@vinz-sc/squadbustersfr-api';
+import { Article, ArticleType } from '@vinz-sc/squadbustersfr-api';
 
 import { CoreService } from '../../../../core/services/core.service';
 
@@ -56,9 +56,9 @@ export class FullArticleComponent implements OnInit {
 
   public get backUrl(): string {
     switch (this.article?.type) {
-      case 'News':
+      case ArticleType.News:
         return '/news';
-      case 'SneakPeek':
+      case ArticleType.SneakPeek:
         return '/updates';
       default:
         return '';

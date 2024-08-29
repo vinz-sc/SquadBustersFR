@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import {
   bootstrapChevronRight,
+  bootstrapDiscord,
   bootstrapTiktok,
   bootstrapTwitterX,
   bootstrapYoutube,
@@ -26,6 +27,7 @@ import { CreatorCardComponent } from './components/creator-card/creator-card.com
     HomeRoutingModule,
     NgIconsModule.withIcons({
       bootstrapChevronRight,
+      bootstrapDiscord,
       bootstrapTiktok,
       bootstrapTwitterX,
       bootstrapYoutube,

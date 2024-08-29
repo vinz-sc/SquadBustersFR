@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-
 import { Creator } from '../../../../core/models/Creator';
 
 @Component({
@@ -13,5 +12,5 @@ export class CreatorCardComponent {
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
   @Input()
-  public creator?: Creator;
+  public creator: Creator | null = null;
 }

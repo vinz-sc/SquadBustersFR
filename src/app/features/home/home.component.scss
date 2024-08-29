@@ -17,7 +17,6 @@
     background-size: cover;
 
     overflow: hidden;
-    z-index: -1;
 
     .sb-container {
       padding-top: 100px;
@@ -33,7 +32,7 @@
         .sb-title {
           margin-bottom: 0;
 
-          color: var(--sb-white);
+          color: var(--sb-black);
 
           font-size: 3rem;
         }
