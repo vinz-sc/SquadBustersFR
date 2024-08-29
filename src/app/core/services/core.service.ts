@@ -1,9 +1,17 @@
 import { Injectable } from '@angular/core';
-import { SquadBustersFRApi } from '@vinz-sc/squadbustersfr-api';
+import {
+  CharacterClass,
+  CharacterEvolution,
+  MonsterDifficulty,
+  Rarity,
+  SquadBustersFRApi,
+  SupercellGame,
+} from '@vinz-sc/squadbustersfr-api';
 
 import { environment } from '../../../environments/environment';
 
 import { Creator } from '../models/Creator';
+import { CharacterFilter } from '../models/CharacterFilter';
 
 @Injectable({
   providedIn: 'root',
@@ -36,6 +44,23 @@ export class CoreService {
 
   public acceptCookies() {
     localStorage.setItem(this.SESSION_COOKIE_KEY, 'true');
+  }
+
+  public groupBy<T extends Record<string, any>, K extends keyof T>(
+    array: T[],
+    key: K
+  ): Record<string, T[]> {
+    return array.reduce((result, currentValue) => {
+      const groupKey = currentValue[key];
+
+      if (!result[groupKey]) {
+        result[groupKey] = [];
+      }
+
+      result[groupKey].push(currentValue);
+
+      return result;
+    }, {} as Record<string, T[]>);
   }
 
   /* * * * * * * * * * * * * * * *\
