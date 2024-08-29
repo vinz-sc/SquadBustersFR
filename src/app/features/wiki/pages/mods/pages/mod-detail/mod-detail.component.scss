@@ -1,0 +1,60 @@
+.sb-back {
+  position: absolute;
+  z-index: 1;
+}
+
+@media screen and (max-width: 45rem) {
+  .sb-back {
+    display: none;
+  }
+}
+
+.sb-title {
+  font-family: "SquadLatinBold", sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+
+  text-align: center;
+}
+
+.sb-section-title {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+
+  font-family: "SquadLatinBold", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+
+  text-align: center;
+}
+
+.sb-world {
+  display: flex;
+
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+
+  margin-bottom: 3rem;
+
+  img {
+    width: 32px;
+  }
+
+  .sb-link {
+    font-size: 1.5rem;
+  }
+}
+
+.sb-link {
+  color: rgba(var(--sb-link-color), 0.8);
+  text-decoration: none;
+  text-transform: capitalize;
+
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: rgba(var(--sb-link-color), 1);
+    text-decoration: underline;
+  }
+}
