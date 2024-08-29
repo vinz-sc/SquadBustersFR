@@ -1,0 +1,98 @@
+<div class="sb-header-bg" [style.background]="headerBackground">
+  <app-separator></app-separator>
+</div>
+
+<div class="sb-content-separator">
+  <app-separator></app-separator>
+
+  <div class="sb-container">
+    <a class="sb-back sb-btn" routerLink="/wiki/worlds">
+      <ng-icon name="bootstrapChevronDoubleLeft" size=""></ng-icon>
+    </a>
+
+    <div *ngIf="world; else notFound">
+      <h1 class="sb-title">{{ world.name }}</h1>
+
+      <div class="sb-icon">
+        <img [src]="world.iconUrl" alt="Icône" />
+      </div>
+
+      <app-world-informations
+        class="mb-3"
+        [aventureSquad]="world.aventureSquad"
+        [charactersCount]="world.characters.length"
+        [inspiringGame]="world.inspiringGame"
+        [modsCount]="world.mods.length"
+        [monstersCount]="world.monsters.length"
+        [render3DUrl]="world.render3DUrl"
+        [spellsCount]="world.spells.length"
+      ></app-world-informations>
+
+      <div class="sb-description">
+        <h2 class="sb-section-title">Description</h2>
+        <div class="text-center">
+          {{ world.description }}
+        </div>
+      </div>
+
+      <div *ngIf="characters.length" class="sb-characters">
+        <h2 class="sb-section-title">Personnages</h2>
+
+        <div class="row justify-content-center">
+          <div
+            *ngFor="let character of characters"
+            class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4"
+          >
+            <app-character-preview
+              [character]="character"
+            ></app-character-preview>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="spells.length" class="sb-spells">
+        <h2 class="sb-section-title">Sorts</h2>
+
+        <div class="row justify-content-center">
+          <div
+            *ngFor="let spell of spells"
+            class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4"
+          >
+            <app-spell-preview [spell]="spell"></app-spell-preview>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="mods.length" class="sb-mods">
+        <h2 class="sb-section-title">Mods</h2>
+
+        <div class="row justify-content-center">
+          <div *ngFor="let mod of mods" class="col-12 col-md-6 col-lg-4 mb-4">
+            <app-mod-preview [mod]="mod"></app-mod-preview>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="monsters.length" class="sb-monsters">
+        <h2 class="sb-section-title">Monstres</h2>
+
+        <div class="row justify-content-center">
+          <div
+            *ngFor="let monster of monsters"
+            class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4"
+          >
+            <app-monster-preview [monster]="monster"></app-monster-preview>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="world.maps.length" class="sb-maps">
+        <h2 class="sb-section-title">Cartes</h2>
+        <app-world-maps [maps]="world.maps"></app-world-maps>
+      </div>
+    </div>
+    <ng-template #notFound>
+      <app-not-found [contentOnly]="true"></app-not-found>
+    </ng-template>
+  </div>
+</div>

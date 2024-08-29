@@ -1,0 +1,60 @@
+<div class="sb-details">
+  <div class="sb-render">
+    <img [src]="render3DUrl" alt="Rendu 3D" />
+  </div>
+  <div class="sb-informations">
+    <ul class="sb-list">
+      <li *ngIf="aventureSquad" class="sb-item row">
+        <div class="col">
+          <span class="sb-label">Plage aventure squad</span>
+        </div>
+        <div class="col-4">
+          <span class="sb-value">{{ aventureSquad }}</span>
+        </div>
+      </li>
+      <li *ngIf="inspiringGame" class="sb-item row">
+        <div class="col">
+          <span class="sb-label">Inspiré de</span>
+        </div>
+        <div class="col-4">
+          <span class="sb-value">{{ translatedGame }}</span>
+        </div>
+      </li>
+      <li *ngIf="aventureSquad || inspiringGame" class="sb-item">
+        <hr class="sb-separator" />
+      </li>
+      <li class="sb-item row">
+        <div class="col">
+          <span class="sb-label">Nombre de personnages</span>
+        </div>
+        <div class="col-4">
+          <span class="sb-value">{{ charactersCount }}</span>
+        </div>
+      </li>
+      <li class="sb-item row">
+        <div class="col">
+          <span class="sb-label">Nombre de sorts</span>
+        </div>
+        <div class="col-4">
+          <span class="sb-value">{{ spellsCount }}</span>
+        </div>
+      </li>
+      <li class="sb-item row">
+        <div class="col">
+          <span class="sb-label">Nombre de mods</span>
+        </div>
+        <div class="col-4">
+          <span class="sb-value">{{ modsCount }}</span>
+        </div>
+      </li>
+      <li class="sb-item row">
+        <div class="col">
+          <span class="sb-label">Nombre de monstres</span>
+        </div>
+        <div class="col-4">
+          <span class="sb-value">{{ monstersCount }}</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="row justify-content-center">
+  <div
+    *ngFor="let map of maps; let i = index"
+    class="col-12 col-md-6 col-lg-4 mb-4"
+  >
+    <div class="sb-card" (click)="openMap(map.imageUrl)">
+      <img [src]="map.imageUrl" alt="Map {{ i }}" />
+    </div>
+  </div>
+</div>

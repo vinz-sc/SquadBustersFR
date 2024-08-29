@@ -1,0 +1,33 @@
+.sb-search {
+  position: relative;
+
+  ng-icon {
+    position: absolute;
+
+    top: 13px;
+    left: 15px;
+
+    color: rgba(var(--sb-color-rgb), 0.7);
+  }
+
+  input {
+    background-color: var(--sb-bg-color-dark);
+
+    border: 3px solid black;
+    border-radius: 10px;
+
+    color: var(--sb-color);
+
+    box-shadow: 0 3px 0 black;
+    text-indent: 30px;
+
+    &:focus {
+      box-shadow: 0 3px 0 black;
+      outline: none;
+    }
+
+    &::placeholder {
+      color: rgba(var(--sb-color-rgb), 0.5);
+    }
+  }
+}

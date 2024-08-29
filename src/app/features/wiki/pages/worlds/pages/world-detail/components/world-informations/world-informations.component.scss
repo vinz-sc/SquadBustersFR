@@ -1,0 +1,71 @@
+.sb-details {
+  display: flex;
+
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+
+  .sb-render {
+    flex-basis: 250px;
+    flex-grow: 1;
+
+    max-width: 300px;
+
+    background-color: var(--sb-bg-color-light);
+
+    border: 3px solid black;
+    border-radius: 10px;
+
+    box-shadow: 0 3px 0 black;
+
+    overflow: hidden;
+
+    img {
+      width: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  .sb-informations {
+    flex-basis: 25rem;
+    flex-grow: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    max-width: 40rem;
+
+    padding: 1.5rem;
+
+    background-color: var(--sb-bg-color-light);
+
+    border: 3px solid black;
+    border-radius: 10px;
+
+    box-shadow: 0 3px 0 black;
+
+    .sb-list {
+      flex-grow: 1;
+
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+
+      .sb-item:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+
+      .sb-label {
+        font-family: "SquadLatinBold", sans-serif;
+        font-weight: 500;
+      }
+
+      .sb-value {
+        color: rgba(var(--sb-color-rgb), 0.8);
+      }
+    }
+  }
+}
