@@ -1,0 +1,60 @@
+<div class="sb-header-bg">
+  <app-separator></app-separator>
+</div>
+
+<div class="sb-content-separator">
+  <app-separator></app-separator>
+
+  <div class="sb-container">
+    <a class="sb-back sb-btn" routerLink="/wiki/">
+      <ng-icon name="bootstrapChevronDoubleLeft" size=""></ng-icon>
+    </a>
+
+    <h1 class="sb-title">Les monstres</h1>
+
+    <div class="row flex-wrap-reverse justify-content-between mb-3">
+      <div class="col-sm-4 col-md-3 col-lg-2 mb-3">
+        <app-filter
+          [(filter)]="currentFilter"
+          [filterOptions]="filterOptions"
+        ></app-filter>
+      </div>
+      <div class="col-sm-5 col-md-4 col-lg-3 mb-3">
+        <app-search
+          placeholder="Rechercher un personnage..."
+          (searched)="onSearched($event)"
+        ></app-search>
+      </div>
+    </div>
+
+    <div *ngFor="let filter of filteredMonsters" class="row mb-3">
+      <div class="col">
+        <div class="row sb-section">
+          <div class="col">
+            <img
+              *ngIf="filter.headerIcon"
+              [src]="filter.headerIcon"
+              alt="Section icon"
+            />
+            <h2 class="sb-section-title">
+              {{ filter.header }}
+            </h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <hr class="sb-hr" />
+          </div>
+        </div>
+        <div class="row">
+          <div
+            *ngFor="let monster of filter.monsters"
+            class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4"
+          >
+            <app-monster-preview [monster]="monster"></app-monster-preview>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

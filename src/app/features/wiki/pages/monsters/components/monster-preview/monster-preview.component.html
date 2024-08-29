@@ -1,0 +1,15 @@
+<a
+  class="sb-card"
+  [routerLink]="link"
+  [style.backgroundImage]="backgroundImage"
+>
+  <div class="sb-gradient" [style.--sb-gradient]="linearGradient"></div>
+  <img
+    class="sb-monster"
+    [src]="monster?.profileImageUrl"
+    [alt]="monster?.name"
+  />
+  <div class="sb-header">
+    <h3 class="sb-title">{{ monster?.name }}</h3>
+  </div>
+</a>

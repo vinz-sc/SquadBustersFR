@@ -1,0 +1,64 @@
+<div class="sb-header-bg" [style.background]="headerBackground">
+  <app-separator></app-separator>
+</div>
+
+<div class="sb-content-separator">
+  <app-separator></app-separator>
+
+  <div class="sb-container">
+    <a class="sb-back sb-btn" routerLink="/wiki/monsters">
+      <ng-icon name="bootstrapChevronDoubleLeft" size=""></ng-icon>
+    </a>
+
+    <div *ngIf="monster; else notFound">
+      <h1 class="sb-title">{{ monster.name }}</h1>
+
+      <div class="sb-subtitle">
+        <img [src]="monster.iconUrl" alt="Icône" />
+        <h5 [style.color]="color">{{ translatedDifficulty }}</h5>
+      </div>
+
+      <div class="sb-profile">
+        <div class="sb-card" [style.background]="linearGradient">
+          <img [src]="monster.profileImageUrl" [alt]="monster.name" />
+        </div>
+      </div>
+
+      <div class="sb-informations">
+        <h2 class="sb-section-title">Informations</h2>
+        <app-monster-informations
+          [games]="monster.games"
+          [translatedDifficulty]="translatedDifficulty"
+          [worlds]="monster.worlds"
+        ></app-monster-informations>
+      </div>
+
+      <div class="sb-description">
+        <h2 class="sb-section-title">Description</h2>
+        <div class="text-center">
+          {{ monster.description }}
+        </div>
+      </div>
+
+      <div class="sb-behaviour">
+        <h2 class="sb-section-title">Comportement et attaques</h2>
+        <div class="text-center">
+          {{ monster.behaviorAndAttacks }}
+        </div>
+      </div>
+
+      <div *ngIf="monster.modId" class="sb-mod">
+        <h2 class="sb-section-title">Mod associé</h2>
+
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <app-mod-preview [mod]="mod"></app-mod-preview>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #notFound>
+      <app-not-found [contentOnly]="true"></app-not-found>
+    </ng-template>
+  </div>
+</div>

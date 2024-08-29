@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="sb-card">
+      <h4 class="sb-title">Jeux d'origine</h4>
+      <ul *ngIf="games.length" class="sb-list">
+        <li *ngFor="let game of games; let i = index" class="sb-item">
+          <img [src]="gameUrls[i]" [alt]="game" />
+          <span class="sb-label">{{ translateGame(game) }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="sb-card">
+      <h4 class="sb-title">Mondes</h4>
+      <ul *ngIf="worlds.length" class="sb-list">
+        <li *ngFor="let world of worlds" class="sb-item">
+          <img [src]="world.iconUrl" [alt]="world.name" />
+          <a
+            [routerLink]="buildWorldLink(world)"
+            class="sb-link"
+            [style.--sb-link-color]="linkColor"
+          >
+            {{ world.name }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="sb-card">
+      <h4 class="sb-title">Difficulté</h4>
+      <ul class="sb-list">
+        <li class="sb-item">
+          <a
+            routerLink="/wiki/monsters"
+            [queryParams]="{ filter: 'difficulty' }"
+            class="sb-link"
+            [style.--sb-link-color]="linkColor"
+          >
+            {{ translatedDifficulty }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
