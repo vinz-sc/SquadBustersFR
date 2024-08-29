@@ -1,0 +1,71 @@
+.sb-card {
+  position: relative;
+  display: flex;
+
+  flex-direction: column;
+  gap: 1.5rem;
+
+  height: 100%;
+
+  padding: 1.5rem;
+
+  background-color: var(--sb-bg-color-light);
+
+  border: 3px solid black;
+  border-radius: 10px;
+
+  box-shadow: 0 3px 0 black;
+
+  .sb-title {
+    font-family: "SquadLatinBold", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+
+    text-align: center;
+  }
+
+  .sb-list {
+    display: flex;
+
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+
+    padding: 0;
+    margin: 0;
+
+    .sb-item {
+      display: flex;
+
+      align-items: center;
+      gap: 1rem;
+
+      width: 100%;
+
+      list-style: none;
+
+      img {
+        max-width: 128px;
+        max-height: 64px;
+
+        height: auto;
+      }
+    }
+
+    .sb-label {
+      color: rgba(var(--sb-color-rgb), 0.8);
+    }
+
+    .sb-link {
+      color: rgba(var(--sb-link-color), 0.8);
+      text-decoration: none;
+
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: rgba(var(--sb-link-color), 1);
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.sb-card {
+  position: relative;
+
+  width: 100%;
+
+  padding: 1rem;
+
+  border: 3px solid black;
+  border-radius: 10px;
+
+  background-color: var(--sb-bg-color-light);
+
+  box-shadow: 0 3px 0 black;
+
+  .row {
+    margin-bottom: 0.5rem;
+  }
+
+  .sb-fusion-header {
+    max-width: 100%;
+
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .sb-title {
+    display: flex;
+
+    align-items: center;
+    gap: 1rem;
+
+    img {
+      width: 30px;
+    }
+
+    span {
+      font-family: "SquadLatinBold", sans-serif;
+      font-weight: 900;
+    }
+  }
+
+  .sb-number {
+    margin: 0 auto;
+
+    align-self: center;
+
+    &.sb-purple {
+      color: var(--sb-purple);
+    }
+  }
+
+  .sb-description {
+    display: flex;
+
+    align-items: center;
+    gap: 1rem;
+
+    img {
+      width: 50px;
+    }
+
+    .sb-label {
+      color: rgba(var(--sb-color-rgb), 0.8);
+
+      font-size: 0.85rem;
+    }
+  }
+}

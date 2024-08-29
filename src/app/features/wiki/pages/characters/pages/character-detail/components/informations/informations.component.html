@@ -1,0 +1,74 @@
+<div class="row justify-content-center">
+  <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="sb-card">
+      <h4 class="sb-title">Jeux d'origine</h4>
+      <ul class="sb-list">
+        <li *ngFor="let url of gameUrls; let i = index" class="sb-item">
+          <img [src]="url" [alt]="games[i]" />
+          <span class="sb-label">{{ translateGame(games[i]) }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="sb-card">
+      <h4 class="sb-title">Monde</h4>
+      <ul *ngIf="world" class="sb-list">
+        <li class="sb-item">
+          <img [src]="world.iconUrl" [alt]="world.name" />
+          <a
+            [routerLink]="worldUrl"
+            class="sb-link"
+            [style.--sb-link-color]="linkColor"
+          >
+            {{ world.name }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="sb-card">
+      <h4 class="sb-title">Rareté</h4>
+      <ul class="sb-list">
+        <li class="sb-item">
+          <img [src]="rarityIconUrl" alt="{{ rarity }} chest" />
+          <a
+            routerLink="/wiki/characters"
+            [queryParams]="{ filter: 'rarity' }"
+            class="sb-link"
+            [style.--sb-link-color]="linkColor"
+          >
+            {{ translateRarity(rarity) }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="sb-card">
+      <h4 class="sb-title">Classe</h4>
+      <ul class="sb-list">
+        <li class="sb-item">
+          <img [src]="classIconUrl" [alt]="class" />
+          <a
+            routerLink="/wiki/characters"
+            [queryParams]="{ filter: 'class' }"
+            class="sb-link"
+            [style.--sb-link-color]="linkColor"
+          >
+            {{ translateClass(class) }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-lg-8 mb-4">
+    <div class="sb-card">
+      <h4 class="sb-title">Description</h4>
+      <div class="text-center">
+        {{ description }}
+      </div>
+    </div>
+  </div>
+</div>

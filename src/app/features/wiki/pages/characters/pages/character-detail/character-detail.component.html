@@ -1,0 +1,92 @@
+<div class="sb-header-bg" [style.background]="headerBackground">
+  <app-separator></app-separator>
+</div>
+
+<div class="sb-content-separator">
+  <app-separator></app-separator>
+
+  <div class="sb-container">
+    <a class="sb-back sb-btn" routerLink="/wiki/characters">
+      <ng-icon name="bootstrapChevronDoubleLeft" size=""></ng-icon>
+    </a>
+
+    <div *ngIf="character; else notFound">
+      <h1 class="sb-title">{{ character.name }}</h1>
+      <h5 class="sb-subtitle" [style.color]="color">
+        {{ translateRarity(character.rarity) }}
+      </h5>
+
+      <div class="sb-content">
+        <div class="row justify-content-center">
+          <div
+            *ngFor="let profile of character.profiles"
+            class="col-6 col-md-3 mb-4"
+          >
+            <div class="sb-picture-card" [style.background]="linearGradient">
+              <img [src]="profile.imageUrl" [alt]="profile.evolution" />
+              <h5 class="sb-name">
+                {{ translateEvolution(profile.evolution) }}
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="sb-informations">
+          <h2 class="sb-section-title">Informations</h2>
+          <app-informations
+            [class]="character.class"
+            [description]="character.description"
+            [games]="character.games"
+            [rarity]="character.rarity"
+            [worldId]="character.worldId"
+          ></app-informations>
+        </div>
+
+        <div class="sb-statistics">
+          <h2 class="sb-section-title">Statistiques</h2>
+          <app-statistics
+            [damage]="character.damages"
+            [fusionAbility]="character.fusionAbility"
+            [fusionDamage]="character.fusionDamages"
+            [fusionHealth]="character.fusionHitpoints"
+            [health]="character.hitpoints"
+          ></app-statistics>
+        </div>
+
+        <div class="sb-abilities">
+          <h2 class="sb-section-title">Capacités</h2>
+          <app-abilities [abilities]="character.abilities"></app-abilities>
+        </div>
+
+        <div *ngIf="spells.length" class="sb-spells">
+          <h2 class="sb-section-title">Sorts exclusifs</h2>
+
+          <div class="row justify-content-center">
+            <div
+              *ngFor="let spell of spells"
+              class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4"
+            >
+              <app-spell-preview [spell]="spell"></app-spell-preview>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="character.emotes.length" class="sb-emotes">
+          <h2 class="sb-section-title">Émoticônes</h2>
+          <app-emotes [emotes]="character.emotes"></app-emotes>
+        </div>
+
+        <div *ngIf="character.skins.length" class="sb-skins">
+          <h2 class="sb-section-title">Skins</h2>
+          <app-skins
+            [characterRarity]="character.rarity"
+            [skins]="character.skins"
+          ></app-skins>
+        </div>
+      </div>
+    </div>
+    <ng-template #notFound>
+      <app-not-found [contentOnly]="true"></app-not-found>
+    </ng-template>
+  </div>
+</div>

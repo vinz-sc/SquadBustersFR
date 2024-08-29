@@ -1,0 +1,12 @@
+<a
+  class="sb-card"
+  [routerLink]="link"
+  [style.backgroundImage]="backgroundImage"
+>
+  <div class="sb-gradient" [style.--sb-rarity-gradient]="gradient"></div>
+  <img class="sb-character" [src]="profileUrl" [alt]="name" />
+  <div class="sb-header">
+    <img [src]="classIconUrl" [alt]="class" />
+    <h3 class="sb-title">{{ name }}</h3>
+  </div>
+</a>

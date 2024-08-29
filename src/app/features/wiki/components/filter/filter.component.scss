@@ -1,0 +1,54 @@
+.sb-filter {
+  position: relative;
+
+  ng-icon {
+    position: absolute;
+
+    top: 13px;
+    left: 15px;
+
+    color: rgba(var(--sb-color-rgb), 0.7);
+
+    z-index: 1;
+  }
+
+  .sb-select {
+    display: block;
+
+    width: 100%;
+
+    padding: 0.375rem 0.75rem;
+
+    color: var(--sb-color);
+
+    background-color: var(--sb-bg-color-dark);
+
+    border: 3px solid black;
+    border-radius: 10px;
+
+    box-shadow: 0 3px 0 black;
+
+    text-align: left;
+    text-indent: 25px;
+  }
+
+  .dropdown-menu {
+    background-color: var(--sb-bg-color-dark);
+
+    border: 3px solid black;
+    border-radius: 10px;
+
+    box-shadow: 0 3px 0 black;
+
+    .dropdown-item {
+      color: var(--sb-color);
+
+      cursor: pointer;
+
+      &:hover {
+        color: var(--sb-color);
+        background-color: var(--sb-bg-color-light);
+      }
+    }
+  }
+}

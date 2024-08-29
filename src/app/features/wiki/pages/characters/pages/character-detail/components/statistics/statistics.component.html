@@ -1,0 +1,53 @@
+<div class="row justify-content-center">
+  <div class="col-sm-9 col-md-7 col-lg-5 mb-4">
+    <div class="sb-card">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col-2">
+          <div class="sb-fusion-header">
+            <img src="assets/images/wiki/fusion-active.png" alt="Fusion" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="sb-title">
+            <img src="assets/images/wiki/damage.png" alt="Dégâts par seconde" />
+            <span>Dégâts par seconde</span>
+          </div>
+        </div>
+        <div class="col-2 d-grid">
+          <div class="sb-number">{{ damage }}</div>
+        </div>
+        <div class="col-2 d-grid">
+          <div class="sb-number sb-purple">{{ fusionDamage }}</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="sb-title">
+            <img src="assets/images/wiki/health.png" alt="Points de vie" />
+            <span>Points de vie</span>
+          </div>
+        </div>
+        <div class="col-2 d-grid">
+          <div class="sb-number">{{ health }}</div>
+        </div>
+        <div class="col-2 d-grid">
+          <div class="sb-number sb-purple">{{ fusionHealth }}</div>
+        </div>
+      </div>
+      <div *ngIf="fusionAbility" class="row">
+        <div class="col">
+          <div class="sb-description">
+            <img src="assets/images/wiki/fusion.png" alt="Fusion" />
+            <div class="sb-label">
+              {{ fusionAbility }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

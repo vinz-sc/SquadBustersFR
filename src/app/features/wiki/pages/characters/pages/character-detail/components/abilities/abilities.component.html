@@ -1,0 +1,26 @@
+<div class="row justify-content-center">
+  <div *ngFor="let ability of abilities" class="col-sm-6 col-lg-4 mb-4">
+    <div class="sb-card">
+      <div class="sb-stars">
+        <img
+          *ngFor="
+            let _ of [].constructor(parseEvolutionAsLevel(ability.evolution))
+          "
+          src="assets/images/wiki/star.png"
+          alt="Star"
+        />
+      </div>
+      <div class="sb-body">
+        <div class="sb-icon">
+          <img [src]="ability.iconUrl" alt="{{ ability.evolution }} Ability" />
+        </div>
+        <div class="sb-content">
+          <h4 class="sb-title">{{ translateEvolution(ability.evolution) }}</h4>
+          <div class="sb-description">
+            {{ ability.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

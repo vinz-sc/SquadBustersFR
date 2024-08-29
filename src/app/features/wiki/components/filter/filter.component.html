@@ -1,0 +1,16 @@
+<div class="sb-filter">
+  <ng-icon name="bootstrapFilter" size=""></ng-icon>
+  <div class="dropdown">
+    <button class="sb-select" data-bs-toggle="dropdown">
+      {{ currentFilter }}
+    </button>
+
+    <ul class="dropdown-menu">
+      <li *ngFor="let option of filterOptions | keyvalue">
+        <a class="dropdown-item" (click)="currentFilter = option.key">
+          {{ option.value }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
