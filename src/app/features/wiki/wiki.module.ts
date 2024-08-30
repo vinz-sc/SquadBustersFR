@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
@@ -17,6 +17,7 @@ import { WikiComponent } from './wiki.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { SearchComponent } from './components/search/search.component';
 
+import { CoreModule } from '../../core/core.module';
 import { SharedModule } from '../../shared/shared.module';
 
 import { CharactersComponent } from './pages/characters/characters.component';
@@ -80,6 +81,7 @@ import { WorldMapsComponent } from './pages/worlds/pages/world-detail/components
   ],
   imports: [
     CommonModule,
+    CoreModule,
     FormsModule,
     NgbModalModule,
     NgIconsModule.withIcons({

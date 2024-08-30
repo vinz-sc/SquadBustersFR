@@ -30,9 +30,10 @@
 
       <div class="sb-description">
         <h2 class="sb-section-title">Description</h2>
-        <div class="text-center">
-          {{ world.description }}
-        </div>
+        <div
+          class="text-center"
+          [innerHTML]="world.description | newlineToParagraph"
+        ></div>
       </div>
 
       <div *ngIf="characters.length" class="sb-characters">

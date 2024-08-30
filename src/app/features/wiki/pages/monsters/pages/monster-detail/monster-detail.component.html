@@ -35,9 +35,10 @@
 
       <div class="sb-description">
         <h2 class="sb-section-title">Description</h2>
-        <div class="text-center">
-          {{ monster.description }}
-        </div>
+        <div
+          class="text-center"
+          [innerHTML]="monster.description | newlineToParagraph"
+        ></div>
       </div>
 
       <div class="sb-behaviour">

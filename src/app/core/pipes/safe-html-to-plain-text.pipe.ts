@@ -8,7 +8,7 @@ export class SafeHtmlToPlainTextPipe implements PipeTransform {
   |*                           PUBLIC                            *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-  transform(value: unknown, ...args: unknown[]): unknown {
+  transform(value: unknown, ..._: unknown[]): unknown {
     if (!value) {
       return '';
     }

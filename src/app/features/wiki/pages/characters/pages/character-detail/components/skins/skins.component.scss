@@ -4,30 +4,32 @@
 
   height: 100%;
 
-  padding: 0.5rem;
-
   border: 3px solid black;
   border-radius: 1rem;
 
   box-shadow: 0 3px 0 black;
 
+  overflow: hidden;
+
   .sb-skin {
     position: relative;
 
     width: 100%;
-    height: 100%;
+    height: calc(100% - 2.5rem);
+
+    padding: 0.5rem;
 
     z-index: 1;
 
-    object-fit: contain;
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+    }
   }
 
   .sb-header {
-    position: absolute;
-
-    left: 0;
-    bottom: 0;
-
     display: flex;
 
     align-items: flex-end;
@@ -36,10 +38,9 @@
     padding: 0.5rem;
 
     width: 100%;
+    height: 2.5rem;
 
     background-color: black;
-
-    z-index: 1;
 
     img {
       height: 1.5rem;

@@ -26,9 +26,10 @@
 
       <div class="sb-description">
         <h2 class="sb-section-title">Description</h2>
-        <div class="text-center">
-          {{ mod.description }}
-        </div>
+        <div
+          class="text-center"
+          [innerHTML]="mod.description | newlineToParagraph"
+        ></div>
       </div>
 
       <div *ngIf="usefulCharacters.length" class="sb-useful-characters">

@@ -22,7 +22,7 @@
     "@ng-icons/bootstrap-icons": "^29.5.0",
     "@ng-icons/core": "^29.5.0",
     "@popperjs/core": "^2.11.8",
-    "@vinz-sc/squadbustersfr-api": "^1.1.3",
+    "@vinz-sc/squadbustersfr-api": "^1.1.6",
     "bootstrap": "^5.3.3",
     "rxjs": "~7.8.1",
     "tslib": "^2.7.0",

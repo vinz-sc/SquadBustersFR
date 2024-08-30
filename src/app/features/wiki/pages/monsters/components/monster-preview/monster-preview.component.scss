@@ -9,6 +9,8 @@
 
   box-shadow: 0 3px 0 black;
 
+  overflow: hidden;
+
   animation: scroll-linear 60s linear infinite;
   transition: transform 0.3s ease-in-out;
 

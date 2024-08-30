@@ -33,9 +33,10 @@
 
       <div class="sb-description">
         <h2 class="sb-section-title">Description</h2>
-        <div class="text-center">
-          {{ spell.description }}
-        </div>
+        <div
+          class="text-center"
+          [innerHTML]="spell.description | newlineToParagraph"
+        ></div>
       </div>
 
       <div *ngIf="character" class="sb-character">

@@ -1,7 +1,9 @@
 <div class="row justify-content-center">
-  <div *ngFor="let skin of skins" class="col-sm-6 col-md-4 col-lg-3 mb-4">
+  <div *ngFor="let skin of skins" class="col-6 col-md-4 col-lg-3 mb-4">
     <div class="sb-card" [style.background]="linearGradient">
-      <img class="sb-skin" [src]="skin.imageUrl" [alt]="skin.name" />
+      <div class="sb-skin">
+        <img [src]="skin.imageUrl" [alt]="skin.name" />
+      </div>
       <div class="sb-header">
         <img [src]="getSkinIconUrl(skin.rarity)" alt="{{ skin.rarity }} Skin" />
         <h3 class="sb-title">{{ skin.name }}</h3>

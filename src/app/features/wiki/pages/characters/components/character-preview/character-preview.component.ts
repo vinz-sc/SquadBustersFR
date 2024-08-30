@@ -47,7 +47,7 @@ export class CharacterPreviewComponent {
   }
 
   public get profileUrl(): string {
-    return this.character?.profiles.at(1)?.imageUrl ?? '';
+    return this.character?.profiles.at(-1)?.imageUrl ?? '';
   }
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
