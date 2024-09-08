@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {
-  Character,
   Mod,
   Monster,
   MonsterDifficulty,
+  Player,
   World,
 } from '@vinz-sc/squadbustersfr-api';
 
@@ -26,6 +26,7 @@ export class ModDetailComponent implements OnInit {
     Object.values(MonsterDifficulty);
 
   private _mod: Mod | null = null;
+  private _player: Player | null = null;
   private _world: World | null = null;
 
   private _usefulCharacters: {
@@ -56,6 +57,12 @@ export class ModDetailComponent implements OnInit {
         if (this._mod?.worldId) {
           this._world = await this._coreService.api.worlds
             .getById(this._mod.worldId)
+            .execute();
+        }
+
+        if (this._mod?.playerId) {
+          this._player = await this._coreService.api.players
+            .getById(this._mod.playerId)
             .execute();
         }
 
@@ -114,6 +121,10 @@ export class ModDetailComponent implements OnInit {
         }
       }) ?? []
     );
+  }
+
+  public get player(): Player | null {
+    return this._player;
   }
 
   public get usefulCharacters(): {

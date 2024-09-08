@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Mod, Monster } from '@vinz-sc/squadbustersfr-api';
+import { Mod, Monster, MonsterDifficulty } from '@vinz-sc/squadbustersfr-api';
 
 import { take } from 'rxjs';
 
@@ -62,7 +62,12 @@ export class MonsterDetailComponent implements OnInit {
 
   public get headerBackground(): string {
     if (this._monster) {
-      if (this._monster.modId) {
+      if (
+        this._monster.modId &&
+        this._monster.difficulty === MonsterDifficulty.Boss
+      ) {
+        return 'var(--sb-boss-special-gradient)';
+      } else if (this._monster.modId) {
         return 'var(--sb-special-gradient)';
       } else {
         return `var(--sb-${this._difficulty}-gradient)`;
@@ -73,7 +78,12 @@ export class MonsterDetailComponent implements OnInit {
   }
 
   public get linearGradient(): string {
-    if (this._monster?.modId) {
+    if (
+      this._monster?.modId &&
+      this._monster.difficulty === MonsterDifficulty.Boss
+    ) {
+      return 'var(--sb-boss-special-gradient)';
+    } else if (this._monster?.modId) {
       return 'var(--sb-special-gradient)';
     } else {
       return `var(--sb-${this._difficulty}-gradient)`;

@@ -26,25 +26,54 @@
 
       <div class="sb-description">
         <h2 class="sb-section-title">Description</h2>
-        <div
-          class="text-center"
-          [innerHTML]="mod.description | newlineToParagraph"
-        ></div>
+
+        <div class="row justify-content-center">
+          <div
+            class="col-sm-10 col-md-9 col-lg-8 sb-card text-center"
+            [innerHTML]="mod.description | newlineToParagraph"
+          ></div>
+        </div>
+      </div>
+
+      <div *ngIf="mod.items.length" class="sb-items">
+        <h2 class="sb-section-title">Objets</h2>
+        <app-mod-items [items]="mod.items"></app-mod-items>
+      </div>
+
+      <div *ngIf="mod.proTip" class="sb-pro-tips">
+        <h2 class="sb-section-title">Conseils</h2>
+
+        <div class="row justify-content-center">
+          <div
+            class="col-sm-10 col-md-9 col-lg-8 sb-card text-center"
+            [innerHTML]="mod.proTip | newlineToParagraph"
+          ></div>
+        </div>
       </div>
 
       <div *ngIf="usefulCharacters.length" class="sb-useful-characters">
         <h2 class="sb-section-title">Personnages utiles</h2>
-        <ul>
-          <li *ngFor="let usefulCharacter of usefulCharacters">
-            <a
-              [routerLink]="usefulCharacter.characterUrl"
-              class="sb-link"
-              [style.--sb-link-color]="linkColor"
-            >
-              {{ usefulCharacter.characterName }}</a
-            >: {{ usefulCharacter.description }}
-          </li>
-        </ul>
+
+        <div class="row justify-content-center">
+          <div class="col-sm-10 col-md-9 col-lg-8 sb-card">
+            <ul>
+              <li *ngFor="let usefulCharacter of usefulCharacters">
+                <a
+                  [routerLink]="usefulCharacter.characterUrl"
+                  class="sb-link"
+                  [style.--sb-link-color]="linkColor"
+                >
+                  {{ usefulCharacter.characterName }}</a
+                >: {{ usefulCharacter.description }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="player" class="sb-player">
+        <h2 class="sb-section-title">Conseillé par</h2>
+        <app-mod-player [player]="player"></app-mod-player>
       </div>
 
       <div *ngIf="monsters.length" class="sb-monsters">

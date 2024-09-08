@@ -58,3 +58,16 @@
     text-decoration: underline;
   }
 }
+
+.sb-card {
+  position: relative;
+
+  padding-top: 1rem;
+
+  background-color: var(--sb-bg-color-light);
+
+  border: 3px solid black;
+  border-radius: 10px;
+
+  box-shadow: 0 3px 0 black;
+}

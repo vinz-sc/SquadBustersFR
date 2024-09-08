@@ -54,8 +54,8 @@
     var(--sb-purple-light),
     var(--sb-purple)
   );
-  --sb-big: var(--sb-epic);
-  --sb-big-gradient: var(--sb-epic-gradient);
+  --sb-boss: var(--sb-epic);
+  --sb-boss-gradient: var(--sb-epic-gradient);
 
   --sb-legendary: var(--sb-red);
   --sb-legendary-gradient: linear-gradient(
@@ -63,8 +63,8 @@
     var(--sb-red-light),
     var(--sb-red)
   );
-  --sb-boss: var(--sb-legendary);
-  --sb-boss-gradient: var(--sb-legendary-gradient);
+  --sb-boss-special: var(--sb-legendary);
+  --sb-boss-special-gradient: var(--sb-legendary-gradient);
 
   --sb-special-gradient: linear-gradient(
     45deg,

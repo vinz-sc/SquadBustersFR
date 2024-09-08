@@ -56,8 +56,6 @@ export class TranslatorService {
         return 'Facile';
       case MonsterDifficulty.Medium:
         return 'Moyen';
-      case MonsterDifficulty.Big:
-        return 'Difficile';
       case MonsterDifficulty.Boss:
         return 'Boss';
       default:
@@ -92,6 +90,8 @@ export class TranslatorService {
         return 'Clash Royale';
       case SupercellGame.HayDay:
         return 'Hay Day';
+      case SupercellGame.SquadBusters:
+        return 'Squad Busters';
       default:
         return game;
     }

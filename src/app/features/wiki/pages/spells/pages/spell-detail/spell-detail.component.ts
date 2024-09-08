@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Character, Spell, World } from '@vinz-sc/squadbustersfr-api';
+import { Character, Player, Spell, World } from '@vinz-sc/squadbustersfr-api';
 
 import { take } from 'rxjs';
 
@@ -17,6 +17,7 @@ export class SpellDetailComponent implements OnInit {
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
   private _character: Character | null = null;
+  private _player: Player | null = null;
   private _spell: Spell | null = null;
   private _world: World | null = null;
 
@@ -42,6 +43,12 @@ export class SpellDetailComponent implements OnInit {
         if (this._spell?.characterId) {
           this._character = await this._coreService.api.characters
             .getById(this._spell.characterId)
+            .execute();
+        }
+
+        if (this._spell?.playerId) {
+          this._player = await this._coreService.api.players
+            .getById(this._spell.playerId)
             .execute();
         }
 
@@ -77,6 +84,10 @@ export class SpellDetailComponent implements OnInit {
     return this._coreService.preferredTheme === 'dark'
       ? 'var(--sb-primary-color-rgb)'
       : 'var(--sb-secondary-color-rgb)';
+  }
+
+  public get player(): Player | null {
+    return this._player;
   }
 
   public get spell(): Spell | null {

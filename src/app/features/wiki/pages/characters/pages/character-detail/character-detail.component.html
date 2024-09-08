@@ -71,6 +71,11 @@
           </div>
         </div>
 
+        <div *ngIf="character.items.length" class="sb-items">
+          <h2 class="sb-section-title">Objets</h2>
+          <app-items [items]="character.items"></app-items>
+        </div>
+
         <div *ngIf="character.emotes.length" class="sb-emotes">
           <h2 class="sb-section-title">Émoticônes</h2>
           <app-emotes [emotes]="character.emotes"></app-emotes>

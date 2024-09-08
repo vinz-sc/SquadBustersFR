@@ -18,9 +18,15 @@ import { SharedModule } from '../../shared/shared.module';
 
 import { ArticleCardComponent } from './components/article-card/article-card.component';
 import { CreatorCardComponent } from './components/creator-card/creator-card.component';
+import { DevResumeComponent } from './components/dev-resume/dev-resume.component';
 
 @NgModule({
-  declarations: [ArticleCardComponent, CreatorCardComponent, HomeComponent],
+  declarations: [
+    ArticleCardComponent,
+    CreatorCardComponent,
+    DevResumeComponent,
+    HomeComponent,
+  ],
   imports: [
     CommonModule,
     CoreModule,

@@ -202,6 +202,58 @@ app-separator {
   }
 }
 
+.sb-resume {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+
+  background-image: url("/assets/images/backgrounds/epic.png");
+  background-repeat: repeat;
+  background-size: cover;
+
+  animation: scroll-linear 5s linear infinite;
+
+  .sb-gradient {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(180deg, #fbaafe, #bc26c5);
+
+    opacity: 0.5;
+  }
+
+  .sb-resume-content {
+    position: relative;
+
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    width: 100%;
+
+    color: var(--sb-black);
+  }
+
+  .sb-container {
+    display: grid;
+
+    .row {
+      justify-content: center;
+
+      margin-bottom: 2rem;
+    }
+  }
+}
+
 @keyframes scroll-linear {
   0% {
     background-position: 0 0;

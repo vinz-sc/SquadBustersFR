@@ -45,10 +45,10 @@
       list-style: none;
 
       img {
-        max-width: 128px;
-        max-height: 64px;
+        width: 128px;
 
-        height: auto;
+        aspect-ratio: 3/2;
+        object-fit: contain;
       }
     }
 
