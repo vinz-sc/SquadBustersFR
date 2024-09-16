@@ -58,7 +58,7 @@ header {
 
     padding: 0.75rem;
 
-    color: rgba(var(--sb-black-rgb), 0.8);
+    color: rgba(var(--sb-white-rgb), 0.8);
 
     text-decoration: none;
 
@@ -66,7 +66,7 @@ header {
 
     &:hover,
     &.sb-link-active {
-      color: var(--sb-black);
+      color: var(--sb-white);
     }
   }
 

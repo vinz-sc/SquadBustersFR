@@ -35,10 +35,12 @@
         <h2 class="sb-section-title">Description</h2>
 
         <div class="row justify-content-center">
-          <div
-            class="col-sm-10 col-md-9 col-lg-8 sb-card text-center"
-            [innerHTML]="spell.description | newlineToParagraph"
-          ></div>
+          <div class="col-sm-10 col-md-9 col-lg-8">
+            <div
+              class="sb-card text-center"
+              [innerHTML]="spell.description | newlineToParagraph"
+            ></div>
+          </div>
         </div>
       </div>
 
@@ -46,10 +48,12 @@
         <h2 class="sb-section-title">Conseils d'utilisation</h2>
 
         <div class="row justify-content-center">
-          <div
-            class="col-sm-10 col-md-9 col-lg-8 sb-card text-center"
-            [innerHTML]="spell.proTip | newlineToParagraph"
-          ></div>
+          <div class="col-sm-10 col-md-9 col-lg-8">
+            <div
+              class="sb-card text-center"
+              [innerHTML]="spell.proTip | newlineToParagraph"
+            ></div>
+          </div>
         </div>
       </div>
 

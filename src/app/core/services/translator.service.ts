@@ -73,6 +73,8 @@ export class TranslatorService {
         return 'Super';
       case CharacterEvolution.Ultra:
         return 'Ultra';
+      case CharacterEvolution.Ultimate:
+        return 'Ultime';
       default:
         return '';
     }
