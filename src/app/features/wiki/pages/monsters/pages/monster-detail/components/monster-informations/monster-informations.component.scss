@@ -44,10 +44,17 @@
 
       list-style: none;
 
-      img {
+      img:not(.sb-icon) {
         width: 128px;
 
         aspect-ratio: 3/2;
+        object-fit: contain;
+      }
+
+      .sb-icon {
+        width: 32px;
+        height: 32px;
+
         object-fit: contain;
       }
     }

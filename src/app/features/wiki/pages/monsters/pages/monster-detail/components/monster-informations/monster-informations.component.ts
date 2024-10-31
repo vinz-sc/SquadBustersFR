@@ -15,7 +15,19 @@ export class MonsterInformationsComponent {
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
   @Input()
+  public damage: number | null = null;
+
+  @Input()
+  public destructionGemBonus: number | null = null;
+
+  @Input()
+  public destructionGoldBonus: number | null = null;
+
+  @Input()
   public games: SupercellGame[] = [];
+
+  @Input()
+  public health: number | null = null;
 
   @Input()
   public translatedDifficulty: string = '';
@@ -52,6 +64,16 @@ export class MonsterInformationsComponent {
     return this.games.map(
       (game) => `/assets/images/wiki/games/${game.toLowerCase()}.png`
     );
+  }
+
+  public get isDestructionBonus(): boolean {
+    return (
+      this.destructionGoldBonus !== null || this.destructionGemBonus !== null
+    );
+  }
+
+  public get isStatistics(): boolean {
+    return this.damage !== null || this.health !== null;
   }
 
   public get linkColor(): string {

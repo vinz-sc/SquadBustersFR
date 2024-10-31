@@ -27,7 +27,11 @@
       <div class="sb-informations">
         <h2 class="sb-section-title">Informations</h2>
         <app-monster-informations
+          [damage]="monster.damage"
+          [destructionGemBonus]="monster.destructionGemBonus"
+          [destructionGoldBonus]="monster.destructionGoldBonus"
           [games]="monster.games"
+          [health]="monster.health"
           [translatedDifficulty]="translatedDifficulty"
           [worlds]="monster.worlds"
         ></app-monster-informations>
@@ -46,7 +50,7 @@
         </div>
       </div>
 
-      <div class="sb-behaviour">
+      <div *ngIf="monster.behaviorAndAttacks" class="sb-behaviour">
         <h2 class="sb-section-title">Comportement et attaques</h2>
 
         <div class="row justify-content-center">
