@@ -10,6 +10,7 @@ import {
 import { NgIconsModule } from '@ng-icons/core';
 
 import { ArticlesRoutingModule } from './articles-routing.module';
+import { ArticlesComponent } from './articles.component';
 
 import { CoreModule } from '../../core/core.module';
 import { SharedModule } from '../../shared/shared.module';
@@ -23,6 +24,7 @@ import { PreviewCardComponent } from './components/preview-card/preview-card.com
 
 @NgModule({
   declarations: [
+    ArticlesComponent,
     FullArticleComponent,
     LoadingCardComponent,
     NewsComponent,

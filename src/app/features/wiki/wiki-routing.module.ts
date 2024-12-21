@@ -6,6 +6,9 @@ import { WikiComponent } from './wiki.component';
 import { CharactersComponent } from './pages/characters/characters.component';
 import { CharacterDetailComponent } from './pages/characters/pages/character-detail/character-detail.component';
 
+import { GameModesComponent } from './pages/game-modes/game-modes.component';
+import { GameModeDetailComponent } from './pages/game-modes/pages/game-mode-detail/game-mode-detail.component';
+
 import { ModsComponent } from './pages/mods/mods.component';
 import { ModDetailComponent } from './pages/mods/pages/mod-detail/mod-detail.component';
 
@@ -32,6 +35,14 @@ const routes: Routes = [
     component: CharacterDetailComponent,
   },
   {
+    path: 'game-modes',
+    component: GameModesComponent,
+  },
+  {
+    path: 'game-modes/:partialUrl',
+    component: GameModeDetailComponent,
+  },
+  {
     path: 'mods',
     component: ModsComponent,
   },
@@ -55,6 +66,18 @@ const routes: Routes = [
     path: 'spells/:partialUrl',
     component: SpellDetailComponent,
   },
+  // {
+  //   path: 'various',
+  //   component: VariousComponent,
+  // },
+  // {
+  //   path: 'various/chests',
+  //   component: ChestsComponent,
+  // },
+  // {
+  //   path: 'various/portal-energy',
+  //   component: PortalEnergyComponent,
+  // },
   {
     path: 'worlds',
     component: WorldsComponent,

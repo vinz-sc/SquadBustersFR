@@ -1,0 +1,66 @@
+.sb-header-bg {
+  background-image: url("/assets/images/header.png");
+  background-position: center center;
+  background-size: cover;
+}
+
+.sb-back {
+  position: absolute;
+  z-index: 1;
+}
+
+@media screen and (max-width: 45rem) {
+  .sb-back {
+    display: none;
+  }
+}
+
+.sb-title {
+  font-family: "SquadLatinBold", sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.sb-section-title {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+
+  font-family: "SquadLatinBold", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+
+  text-align: center;
+}
+
+.sb-icon {
+  display: grid;
+
+  place-items: center;
+
+  margin-bottom: 3rem;
+
+  img {
+    width: 64px;
+  }
+}
+
+.sb-card {
+  position: relative;
+
+  padding: 1rem;
+
+  background-color: var(--sb-bg-color-light);
+
+  border: 3px solid black;
+  border-radius: 10px;
+
+  box-shadow: 0 3px 0 black;
+}
+
+.sb-img {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,74 @@
+<div class="sb-header-bg">
+  <div class="sb-header-dark">
+    <app-separator></app-separator>
+  </div>
+</div>
+
+<div class="sb-content-separator">
+  <app-separator></app-separator>
+
+  <div class="sb-container">
+    <a class="sb-back sb-btn" routerLink="/wiki/game-modes">
+      <ng-icon name="bootstrapChevronDoubleLeft" size=""></ng-icon>
+    </a>
+
+    <div *ngIf="gameMode; else notFound">
+      <h1 class="sb-title">{{ gameMode.name }}</h1>
+
+      <div class="sb-icon">
+        <img [src]="gameMode.iconUrl" alt="Icône" />
+      </div>
+
+      <div class="sb-description">
+        <h2 class="sb-section-title">Description</h2>
+
+        <div class="row justify-content-center">
+          <div class="col-sm-10 col-md-9 col-lg-8">
+            <div
+              class="sb-card text-center"
+              [innerHTML]="gameMode.description | newlineToParagraph"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sb-rewards">
+        <h2 class="sb-section-title">Récompenses</h2>
+
+        <div class="row justify-content-center">
+          <div class="col-sm-10 col-md-9 col-lg-8">
+            <img class="sb-img" [src]="gameMode.rewardsImageUrl" />
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="characters.length" class="sb-characters">
+        <h2 class="sb-section-title">Personnages non disponibles</h2>
+
+        <div class="row justify-content-center">
+          <div
+            *ngFor="let character of characters"
+            class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4"
+          >
+            <app-character-preview
+              [character]="character"
+            ></app-character-preview>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="mods.length" class="sb-mods">
+        <h2 class="sb-section-title">Mods non disponibles</h2>
+
+        <div class="row justify-content-center">
+          <div *ngFor="let mod of mods" class="col-12 col-md-6 col-lg-4 mb-4">
+            <app-mod-preview [mod]="mod"></app-mod-preview>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #notFound>
+      <app-not-found [contentOnly]="true"></app-not-found>
+    </ng-template>
+  </div>
+</div>

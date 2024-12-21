@@ -1,0 +1,32 @@
+<div class="sb-header-bg">
+  <div class="sb-header-dark">
+    <app-separator></app-separator>
+  </div>
+</div>
+
+<div class="sb-content-separator">
+  <app-separator></app-separator>
+
+  <div class="sb-container">
+    <a class="sb-back sb-btn" routerLink="/wiki/">
+      <ng-icon name="bootstrapChevronDoubleLeft" size=""></ng-icon>
+    </a>
+
+    <h1 class="sb-title">Les modes de jeu</h1>
+
+    <div class="row justify-content-end mb-3">
+      <div class="col-sm-5 col-md-4 col-lg-3 mb-3">
+        <app-search
+          placeholder="Rechercher un mode..."
+          (searched)="onSearched($event)"
+        ></app-search>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div *ngFor="let mode of gameModes" class="col-12 col-md-6 col-lg-4 mb-4">
+        <app-game-mode-preview [gameMode]="mode"></app-game-mode-preview>
+      </div>
+    </div>
+  </div>
+</div>

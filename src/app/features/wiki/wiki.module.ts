@@ -21,19 +21,24 @@ import { CoreModule } from '../../core/core.module';
 import { SharedModule } from '../../shared/shared.module';
 
 import { CharactersComponent } from './pages/characters/characters.component';
+import { GameModesComponent } from './pages/game-modes/game-modes.component';
 import { ModsComponent } from './pages/mods/mods.component';
 import { MonstersComponent } from './pages/monsters/monsters.component';
 import { SpellsComponent } from './pages/spells/spells.component';
+import { VariousComponent } from './pages/various/various.component';
 import { WorldsComponent } from './pages/worlds/worlds.component';
 
 import { CharacterPreviewComponent } from './pages/characters/components/character-preview/character-preview.component';
 import { CharacterDetailComponent } from './pages/characters/pages/character-detail/character-detail.component';
+import { GameModePreviewComponent } from './pages/game-modes/components/game-mode-preview/game-mode-preview.component';
+import { GameModeDetailComponent } from './pages/game-modes/pages/game-mode-detail/game-mode-detail.component';
 import { ModPreviewComponent } from './pages/mods/components/mod-preview/mod-preview.component';
 import { ModDetailComponent } from './pages/mods/pages/mod-detail/mod-detail.component';
 import { MonsterPreviewComponent } from './pages/monsters/components/monster-preview/monster-preview.component';
 import { MonsterDetailComponent } from './pages/monsters/pages/monster-detail/monster-detail.component';
 import { SpellPreviewComponent } from './pages/spells/components/spell-preview/spell-preview.component';
 import { SpellDetailComponent } from './pages/spells/pages/spell-detail/spell-detail.component';
+import { VariousPreviewComponent } from './pages/various/components/various-preview/various-preview.component';
 import { WorldPreviewComponent } from './pages/worlds/components/world-preview/world-preview.component';
 import { WorldDetailComponent } from './pages/worlds/pages/world-detail/world-detail.component';
 
@@ -51,6 +56,9 @@ import { MonsterInformationsComponent } from './pages/monsters/pages/monster-det
 
 import { SpellPlayerComponent } from './pages/spells/pages/spell-detail/components/spell-player/spell-player.component';
 
+import { ChestsComponent } from './pages/various/pages/chests/chests.component';
+import { PortalEnergyComponent } from './pages/various/pages/portal-energy/portal-energy.component';
+
 import { WorldImageModalComponent } from './pages/worlds/pages/world-detail/components/world-image-modal/world-image-modal.component';
 import { WorldInformationsComponent } from './pages/worlds/pages/world-detail/components/world-informations/world-informations.component';
 import { WorldMapsComponent } from './pages/worlds/pages/world-detail/components/world-maps/world-maps.component';
@@ -61,8 +69,12 @@ import { WorldMapsComponent } from './pages/worlds/pages/world-detail/components
     CharacterDetailComponent,
     CharacterPreviewComponent,
     CharactersComponent,
+    ChestsComponent,
     EmotesComponent,
     FilterComponent,
+    GameModeDetailComponent,
+    GameModePreviewComponent,
+    GameModesComponent,
     InformationsComponent,
     ItemsComponent,
     ModDetailComponent,
@@ -74,6 +86,7 @@ import { WorldMapsComponent } from './pages/worlds/pages/world-detail/components
     MonsterInformationsComponent,
     MonsterPreviewComponent,
     MonstersComponent,
+    PortalEnergyComponent,
     SearchComponent,
     SkinsComponent,
     SpellDetailComponent,
@@ -81,6 +94,8 @@ import { WorldMapsComponent } from './pages/worlds/pages/world-detail/components
     SpellPreviewComponent,
     SpellsComponent,
     StatisticsComponent,
+    VariousComponent,
+    VariousPreviewComponent,
     WikiComponent,
     WorldDetailComponent,
     WorldImageModalComponent,

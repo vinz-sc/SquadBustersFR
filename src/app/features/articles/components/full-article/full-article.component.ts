@@ -31,9 +31,21 @@ export class FullArticleComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     const url = this._activatedRoute.snapshot.params['partialUrl'];
-    this._article = await this._coreService.api.articles
-      .getByUrl(url)
-      .execute();
+    const currentPath = this._activatedRoute.snapshot.url[0].path;
+
+    try {
+      if (currentPath === 'updates') {
+        this._article = await this._coreService.api.articles
+          .getByUrl(ArticleType.SneakPeek, url)
+          .execute();
+      } else if (currentPath === 'news') {
+        this._article = await this._coreService.api.articles
+          .getByUrl(ArticleType.News, url)
+          .execute();
+      }
+    } catch (_) {
+      // Do nothing
+    }
 
     if (this._article) {
       this._headerUrl = this._article.headerImageUrl;

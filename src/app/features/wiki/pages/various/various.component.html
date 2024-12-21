@@ -1,0 +1,34 @@
+<div class="sb-header-bg">
+  <div class="sb-header-dark">
+    <app-separator></app-separator>
+  </div>
+</div>
+
+<div class="sb-content-separator">
+  <app-separator></app-separator>
+
+  <div class="sb-container">
+    <a class="sb-back sb-btn" routerLink="/wiki/">
+      <ng-icon name="bootstrapChevronDoubleLeft" size=""></ng-icon>
+    </a>
+
+    <h1 class="sb-title">Divers</h1>
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <app-various-preview
+          backgroundImage="assets/images/wiki/loading.png"
+          link="chests"
+          name="Coffres"
+        ></app-various-preview>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <app-various-preview
+          backgroundImage="assets/images/wiki/loading.png"
+          link="portal-energy"
+          name="Énergie portail"
+        ></app-various-preview>
+      </div>
+    </div>
+  </div>
+</div>

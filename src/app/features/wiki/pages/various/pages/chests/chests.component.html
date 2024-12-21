@@ -1,0 +1,482 @@
+<div class="sb-header-bg">
+  <div class="sb-header-dark">
+    <app-separator></app-separator>
+  </div>
+</div>
+
+<div class="sb-content-separator">
+  <app-separator></app-separator>
+
+  <div class="sb-container">
+    <a class="sb-back sb-btn" routerLink="/wiki/various">
+      <ng-icon name="bootstrapChevronDoubleLeft" size=""></ng-icon>
+    </a>
+
+    <h1 class="sb-title">Les coffres</h1>
+
+    <div class="sb-content">
+      <p>Il existe 4 coffres différents dans SquadBusters :</p>
+
+      <div class="row">
+        <div class="col-6 col-md-3 mb-3">
+          <div class="sb-chest">
+            <img
+              src="assets/images/wiki/chests/common.png"
+              alt="Coffre commun"
+            />
+            <span>Coffre commun</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+          <div class="sb-chest">
+            <img src="assets/images/wiki/chests/rare.png" alt="Coffre rare" />
+            <span>Coffre rare</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+          <div class="sb-chest">
+            <img src="assets/images/wiki/chests/epic.png" alt="Coffre épique" />
+            <span>Coffre épique</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+          <div class="sb-chest">
+            <img src="assets/images/wiki/chests/star.png" alt="Coffre étoilé" />
+            <span>Coffre étoilé</span>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="sb-subtitle">Comment obtenir des coffres ?</h4>
+
+      <p>
+        Pour pouvoir ouvrir les coffres communs, rares et épiques, il faut que
+        vous soyez munis de tickets de coffres !
+      </p>
+
+      <p>
+        <img
+          class="sb-chest-img"
+          src="assets/images/wiki/chest_ticket.png"
+          alt="Ticket de coffre"
+        />
+      </p>
+
+      <p>
+        Les tickets de coffres peuvent être obtenus de la manière suivante :
+      </p>
+
+      <div class="row justify-content-center">
+        <div class="col-sm-10 col-md-8 col-lg-6">
+          <ul>
+            <li>
+              Gratuitement, toutes les 3 heures, ce qui fait 8 coffres sur 24h
+            </li>
+            <li>Dans le magasin, en prenant l'offre 5 tickets à 10000 or</li>
+            <li>Cadeaux dans l'Aventure Squad, en changeant de niveau</li>
+            <li>Cadeaux dans les événements, de type Piñata et Tara</li>
+            <li>Dans le Pass de Gem ou le Super Pass</li>
+          </ul>
+        </div>
+      </div>
+
+      <h4 class="sb-subtitle">Que contiennent les coffres ?</h4>
+
+      <p>
+        Lorsque vous ouvrez un coffre, vous aurez X taps disponibles qui vous
+        donneront plusieurs possibilités d'obtention de personnages.
+      </p>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Récompenses possibles</th>
+                <th scope="col">Chance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Évolution P'tit</th>
+                <td>97.9%</td>
+              </tr>
+              <tr>
+                <th scope="row">Nouveau personnage</th>
+                <td>1%</td>
+              </tr>
+              <tr>
+                <th scope="row">Évolution Classique</th>
+                <td>1%</td>
+              </tr>
+              <tr>
+                <th scope="row">Évolution Super</th>
+                <td>0.1%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p>
+        Les chances du nombre de personnages supplémentaires à chaque tap sont
+        les suivantes.
+      </p>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Nombre de personnages supplémentaires</th>
+                <th scope="col">Chance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">0 personnages</th>
+                <td>40%</td>
+              </tr>
+              <tr>
+                <th scope="row">1 personnage</th>
+                <td>46.8%</td>
+              </tr>
+              <tr>
+                <th scope="row">2 personnages</th>
+                <td>4.2%</td>
+              </tr>
+              <tr>
+                <th scope="row">3 personnages</th>
+                <td>4.2%</td>
+              </tr>
+              <tr>
+                <th scope="row">4 personnages</th>
+                <td>1.8%</td>
+              </tr>
+              <tr>
+                <th scope="row">5 personnages</th>
+                <td>1.8%</td>
+              </tr>
+              <tr>
+                <th scope="row">6 personnages</th>
+                <td>1.2%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p>
+        Si le coffre contient une évolution classique ou super, il n'y aura quoi
+        qu'il arrive qu'un seul personnage, peu importe le nombre de tap.
+      </p>
+
+      <h4 class="sb-subtitle">Comment obtenir des coffres étoilés ?</h4>
+
+      <p>
+        Pour pouvoir ouvrir les coffres étoilés, vous devez avoir des jetons
+        étoilés.
+      </p>
+
+      <p>
+        <img
+          class="sb-chest-img"
+          src="assets/images/wiki/star_token.png"
+          alt="Jeton étoilé"
+        />
+      </p>
+
+      <p>Les jetons étoilés s'obtiennent en :</p>
+
+      <div class="row justify-content-center">
+        <div class="col-sm-10 col-md-8 col-lg-6">
+          <ul>
+            <li>Évoluant des personnages</li>
+            <li>
+              Gagnant des récompenses de palier, que ce soit dans le Pass ou
+              dans l'Aventure Squad
+            </li>
+            <li>Achetant avec des pièces</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>Les évolutions des personnages produisent</p>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Nombre de personnages</th>
+                <th scope="col">Évolution suivante</th>
+                <th scope="col">Nombre de jetons étoilés</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">10 P'tits</th>
+                <td>1 Classique</td>
+                <td class="sb-token">
+                  <span>10</span>
+                  <img
+                    src="assets/images/wiki/star_token.png"
+                    alt="Jetons étoilés"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">10 Classiques</th>
+                <td>1 Super</td>
+                <td class="sb-token">
+                  <span>20</span>
+                  <img
+                    src="assets/images/wiki/star_token.png"
+                    alt="Jetons étoilés"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">10 Supers</th>
+                <td>1 Ultra</td>
+                <td class="sb-token">
+                  <span>30</span>
+                  <img
+                    src="assets/images/wiki/star_token.png"
+                    alt="Jetons étoilés"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">10 Ultras</th>
+                <td>1 Ultime</td>
+                <td class="sb-token">
+                  <span>40</span>
+                  <img
+                    src="assets/images/wiki/star_token.png"
+                    alt="Jetons étoilés"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p>
+        Les <b>TROIS (3) premiers coffres</b> étoilés sont moins chers (20, 50,
+        100), suite à cela le prix est fixé à 500 Jetons étoilés.
+      </p>
+
+      <h4 class="sb-subtitle">Que contiennent les coffres étoilés ?</h4>
+
+      <p>
+        Les coffres étoilés vous donnent plusieurs possibilités d'obtention de
+        personnages.
+      </p>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Récompenses possibles</th>
+                <th scope="col">Chance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Évolution Super</th>
+                <td>58%</td>
+              </tr>
+              <tr>
+                <th scope="row">Nouveau personnage</th>
+                <td>40%</td>
+              </tr>
+              <tr>
+                <th scope="row">Évolution Ultra</th>
+                <td>1.9%</td>
+              </tr>
+              <tr>
+                <th scope="row">Évolution Ultime</th>
+                <td>0.1%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p>Une évolution Ultra est garantie tous les 10 coffres ouverts.</p>
+
+      <p>
+        Si vous avez déjà débloqué tous les personnages, les coffres étoilés ne
+        donneront que des évolutions Super, Ultra ou Ultime.
+      </p>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Récompenses possibles</th>
+                <th scope="col">Chance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Évolution Super</th>
+                <td>96.69%</td>
+              </tr>
+              <tr>
+                <th scope="row">Évolution Ultra</th>
+                <td>3.17%</td>
+              </tr>
+              <tr>
+                <th scope="row">Évolution Ultime</th>
+                <td>0.17%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p>
+        Si le prochain coffre est un Ultra garanti ou mieux, les chances
+        d'obtention sont les suivantes :
+      </p>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Récompenses possibles</th>
+                <th scope="col">Chance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Évolution Ultra</th>
+                <td>95%</td>
+              </tr>
+              <tr>
+                <th scope="row">Évolution Ultime</th>
+                <td>5%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p>
+        Si tous vos personnages sont au niveau maximum, les coffres étoilés ne
+        peuvent pas être ouverts et les jetons étoilés sont sauvegardés.
+      </p>
+
+      <h4 class="sb-subtitle">
+        Comment obtenir des Tap afin de me donner encore plus de chance
+        d'obtenir des personnages ?
+      </h4>
+
+      <p>
+        Le nombre de Tap dépend de deux facteurs : Le classement de votre
+        partie, et la série de victoire.
+      </p>
+
+      <p>
+        Lorsque vous faites une partie, vous avez à la fin un classement qui
+        détermine ne nombre de tap auquel vous aurez le droit.
+      </p>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Position</th>
+                <th scope="col">Nombre de taps</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="sb-position" scope="row">
+                  <img src="assets/images/wiki/positions/1.png" alt="1er" />
+                </th>
+                <td>5</td>
+              </tr>
+              <tr>
+                <th class="sb-position" scope="row">
+                  <img src="assets/images/wiki/positions/2.png" alt="2ème" />
+                </th>
+                <td>4</td>
+              </tr>
+              <tr>
+                <th class="sb-position" scope="row">
+                  <img src="assets/images/wiki/positions/3.png" alt="3ème" />
+                </th>
+                <td>4</td>
+              </tr>
+              <tr>
+                <th class="sb-position" scope="row">
+                  <img src="assets/images/wiki/positions/4.png" alt="4ème" />
+                </th>
+                <td>4</td>
+              </tr>
+              <tr>
+                <th class="sb-position" scope="row">
+                  <img src="assets/images/wiki/positions/5.png" alt="5ème" />
+                </th>
+                <td>3</td>
+              </tr>
+              <tr>
+                <th class="sb-position" scope="row">
+                  <img src="assets/images/wiki/positions/6.png" alt="6ème" />
+                </th>
+                <td>3</td>
+              </tr>
+              <tr>
+                <th class="sb-position" scope="row">
+                  <img src="assets/images/wiki/positions/7.png" alt="7ème" />
+                </th>
+                <td>3</td>
+              </tr>
+              <tr>
+                <th class="sb-position" scope="row">
+                  <img src="assets/images/wiki/positions/8.png" alt="8ème" />
+                </th>
+                <td>3</td>
+              </tr>
+              <tr>
+                <th class="sb-position" scope="row">
+                  <img src="assets/images/wiki/positions/9.png" alt="9ème" />
+                </th>
+                <td>2</td>
+              </tr>
+              <tr>
+                <th class="sb-position" scope="row">
+                  <img src="assets/images/wiki/positions/10.png" alt="10ème" />
+                </th>
+                <td>2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p>
+        Votre nombre de taps peut également être amélioré grâce aux taps bonus
+        obtenus pour les séries de victoire TOP 5.
+      </p>
+
+      <div class="row justify-content-center">
+        <div class="col-sm-10 col-md-8 col-lg-6">
+          <ul>
+            <li>+1 tap pour une série de 2 à 3 TOP 5</li>
+            <li>+2 taps pour une série de 4 à 9 TOP 5</li>
+            <li>+3 taps à partir de 10 TOP 5</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

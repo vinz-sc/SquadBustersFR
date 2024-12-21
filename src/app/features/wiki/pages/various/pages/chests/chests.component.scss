@@ -1,0 +1,86 @@
+.sb-header-bg {
+  background-image: url("/assets/images/header.png");
+  background-position: center center;
+  background-size: cover;
+}
+
+.sb-back {
+  position: absolute;
+}
+
+@media screen and (max-width: 45rem) {
+  .sb-back {
+    display: none;
+  }
+}
+
+.sb-title {
+  margin-bottom: 3rem;
+
+  font-family: "SquadLatinBold", sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+
+  text-align: center;
+}
+
+.sb-chest {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    max-width: 8rem;
+  }
+}
+
+.sb-subtitle {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+
+  font-family: "SquadLatinBold", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+
+  text-align: center;
+}
+
+.sb-chest-img {
+  width: 100%;
+  max-width: 5rem;
+}
+
+.table-dark {
+  --bs-table-bg: var(--sb-bg-color) !important;
+
+  vertical-align: middle;
+
+  .sb-position {
+    text-align: center;
+
+    img {
+      height: 3rem;
+    }
+  }
+
+  .sb-token {
+    vertical-align: middle;
+
+    span {
+      margin-right: 1rem;
+    }
+
+    img {
+      height: 1.5rem;
+    }
+  }
+}
+
+p {
+  text-align: center;
+}
